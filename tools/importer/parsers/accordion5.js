@@ -1,50 +1,40 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Helper to extract all accordion items
-  const accordionContainer = element.querySelector('.one-spark-accordion-container');
-  if (!accordionContainer) return;
+  // Helper to get all accordion panels
+  const panels = element.querySelectorAll('.panel.event-accordion-box');
+  const rows = [];
 
-  // Get all panels (accordion items)
-  const panels = accordionContainer.querySelectorAll('.panel.event-accordion-box');
-
-  // Table header
+  // Header row as per guidelines
   const headerRow = ['Accordion (accordion5)'];
-  const rows = [headerRow];
+  rows.push(headerRow);
 
-  panels.forEach(panel => {
-    // Title cell: find the clickable title
-    const entry = panel.querySelector('.one-spark-accordion-entry');
-    let titleCell = null;
-    if (entry) {
-      // Use the entire clickable header (h3 and any helptext)
-      const toggle = entry.querySelector('.accordion-toggle');
-      if (toggle) {
-        // Defensive: use only the h3 if present, else the toggle div
-        const h3 = toggle.querySelector('h3');
-        titleCell = h3 ? h3 : toggle;
-      } else {
-        titleCell = entry;
-      }
-    } else {
-      titleCell = panel;
+  panels.forEach((panel) => {
+    // Title cell: find the h3 inside the .accordion-toggle
+    const toggle = panel.querySelector('.accordion-toggle');
+    let titleEl = null;
+    if (toggle) {
+      titleEl = toggle.querySelector('h3');
     }
-
-    // Content cell: find the expanded content
-    let contentCell = null;
+    // Defensive fallback: if no h3, use toggle itself
+    if (!titleEl && toggle) {
+      titleEl = toggle;
+    }
+    // Content cell: find the .panel-body
     const collapse = panel.querySelector('.panel-collapse');
+    let contentEl = null;
     if (collapse) {
       const panelBody = collapse.querySelector('.panel-body');
       if (panelBody) {
-        // Use the entire panel-body div for resilience
-        contentCell = panelBody;
-      } else {
-        contentCell = collapse;
+        // Use the full panelBody, which contains all content for this accordion item
+        contentEl = panelBody;
       }
-    } else {
-      contentCell = panel;
     }
-
-    rows.push([titleCell, contentCell]);
+    // Defensive fallback: if no content, use empty string
+    if (!contentEl) {
+      contentEl = document.createElement('div');
+    }
+    // Push row: [title, content]
+    rows.push([titleEl, contentEl]);
   });
 
   // Create the block table

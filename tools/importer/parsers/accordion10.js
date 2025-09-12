@@ -1,46 +1,40 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Defensive: Find the main accordion container
-  const accordionData = element.querySelector('.event-accordion-data');
-  if (!accordionData) return;
-
-  // Get all accordion panels
-  const panels = accordionData.querySelectorAll('.panel.event-accordion-box');
-  if (!panels.length) return;
-
-  // Table header
+  // Defensive: find the accordion panels
+  const panels = Array.from(element.querySelectorAll('.panel.event-accordion-box'));
   const headerRow = ['Accordion (accordion10)'];
   const rows = [headerRow];
 
-  panels.forEach((panel) => {
-    // Title cell: find the clickable header
+  panels.forEach(panel => {
+    // Title cell: find the .one-spark-accordion-entry > .accordion-toggle > h3
+    let title = '';
     const entry = panel.querySelector('.one-spark-accordion-entry');
-    let titleCell = '';
     if (entry) {
-      // Use the h3 if present, fallback to textContent
-      const h3 = entry.querySelector('h3');
-      if (h3) {
-        titleCell = h3;
-      } else {
-        titleCell = entry.textContent.trim();
+      const toggle = entry.querySelector('.accordion-toggle');
+      if (toggle) {
+        const h3 = toggle.querySelector('h3');
+        if (h3) title = h3.textContent.trim();
       }
     }
-
-    // Content cell: find the panel body
-    let contentCell = '';
+    // Content cell: find the .panel-collapse > .panel-body > .text > .default-mobile-padding
+    let content = null;
     const collapse = panel.querySelector('.panel-collapse');
     if (collapse) {
       const body = collapse.querySelector('.panel-body');
       if (body) {
-        // Use the entire body content for resilience
-        contentCell = body;
+        const text = body.querySelector('.text .default-mobile-padding');
+        if (text) {
+          content = text;
+        }
       }
     }
-
-    rows.push([titleCell, contentCell]);
+    // Defensive: if content not found, fallback to empty div
+    if (!content) {
+      content = document.createElement('div');
+    }
+    rows.push([title, content]);
   });
 
-  // Create the block table
-  const block = WebImporter.DOMUtils.createTable(rows, document);
-  element.replaceWith(block);
+  const table = WebImporter.DOMUtils.createTable(rows, document);
+  element.replaceWith(table);
 }
