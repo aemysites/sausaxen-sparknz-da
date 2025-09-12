@@ -1,40 +1,42 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Defensive: ensure element exists and has children
-  if (!element || !element.children || element.children.length === 0) return;
+  // Defensive: Only parse if element has the expected class
+  if (!element || !element.classList.contains('product-features')) return;
 
-  // Header row as required
+  // Header row as per block guidelines
   const headerRow = ['Cards (cards6)'];
+  const rows = [headerRow];
 
-  // Get all feature blocks (cards)
-  const cardEls = Array.from(element.querySelectorAll(':scope > .feature-block'));
+  // Get all feature-blocks (cards)
+  const cards = element.querySelectorAll(':scope > .feature-block');
 
-  // Parse each card
-  const rows = cardEls.map(card => {
-    // Icon cell (first column)
-    const iconWrap = card.querySelector('.feature-icon-size');
-    // Defensive: fallback to first child if not found
-    const iconCell = iconWrap || card.firstElementChild;
+  cards.forEach((card) => {
+    // Icon cell: get the icon container (first child div)
+    const iconContainer = card.querySelector(':scope > .feature-icon-size');
 
-    // Text cell (second column)
-    // Title
-    const titleEl = card.querySelector('h3');
-    // Description
-    const descEl = card.querySelector('.description');
-    // Compose text cell
-    const textCellContent = [];
-    if (titleEl) textCellContent.push(titleEl);
-    if (descEl) textCellContent.push(descEl);
+    // Text cell: collect heading, description, and CTA
+    const textContent = document.createElement('div');
 
-    return [iconCell, textCellContent];
+    // Heading (h3)
+    const heading = card.querySelector(':scope > h3');
+    if (heading) textContent.appendChild(heading);
+
+    // Description (p)
+    const desc = card.querySelector('.description > p');
+    if (desc) textContent.appendChild(desc);
+
+    // CTA (a.read-more)
+    const cta = card.querySelector('.description > a.read-more');
+    if (cta) textContent.appendChild(cta);
+
+    // Add row: [icon, text]
+    rows.push([
+      iconContainer,
+      textContent
+    ]);
   });
 
-  // Compose table data
-  const cells = [headerRow, ...rows];
-
-  // Create block table
-  const block = WebImporter.DOMUtils.createTable(cells, document);
-
-  // Replace original element
-  element.replaceWith(block);
+  // Create the table block
+  const table = WebImporter.DOMUtils.createTable(rows, document);
+  element.replaceWith(table);
 }
