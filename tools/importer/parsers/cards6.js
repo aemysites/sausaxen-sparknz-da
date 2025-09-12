@@ -1,40 +1,42 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Defensive: ensure element exists and has children
-  if (!element || !element.children || element.children.length === 0) return;
-
-  // Header row as required
-  const headerRow = ['Cards (cards6)'];
-
-  // Get all feature blocks (cards)
+  // Defensive: get all immediate feature-block children
   const cardEls = Array.from(element.querySelectorAll(':scope > .feature-block'));
 
-  // Parse each card
-  const rows = cardEls.map(card => {
-    // Icon cell (first column)
-    const iconWrap = card.querySelector('.feature-icon-size');
-    // Defensive: fallback to first child if not found
-    const iconCell = iconWrap || card.firstElementChild;
+  // Table header
+  const headerRow = ['Cards (cards6)'];
+  const rows = [headerRow];
 
-    // Text cell (second column)
-    // Title
-    const titleEl = card.querySelector('h3');
-    // Description
-    const descEl = card.querySelector('.description');
-    // Compose text cell
-    const textCellContent = [];
-    if (titleEl) textCellContent.push(titleEl);
-    if (descEl) textCellContent.push(descEl);
+  cardEls.forEach(card => {
+    // --- Icon cell ---
+    // Find the icon wrapper
+    const iconWrapper = card.querySelector('.feature-icon-size');
+    let iconCell = null;
+    if (iconWrapper) {
+      // Use the icon wrapper div directly for resilience
+      iconCell = iconWrapper;
+    } else {
+      // Fallback: try to find any <i> tag
+      const icon = card.querySelector('i');
+      iconCell = icon || '';
+    }
 
-    return [iconCell, textCellContent];
+    // --- Text cell ---
+    const textContent = [];
+    // Heading
+    const heading = card.querySelector('h3');
+    if (heading) textContent.push(heading);
+    // Description paragraph
+    const desc = card.querySelector('.description p');
+    if (desc) textContent.push(desc);
+    // CTA link
+    const cta = card.querySelector('.description a');
+    if (cta) textContent.push(cta);
+
+    rows.push([iconCell, textContent]);
   });
 
-  // Compose table data
-  const cells = [headerRow, ...rows];
-
-  // Create block table
-  const block = WebImporter.DOMUtils.createTable(cells, document);
-
-  // Replace original element
+  // Create table block
+  const block = WebImporter.DOMUtils.createTable(rows, document);
   element.replaceWith(block);
 }
