@@ -1,114 +1,114 @@
 {
   "originUrl": "https://www.spark.co.nz",
-  "aborted": false,
   "urls": [
     {
-      "url": "https://validate.perfdrive.com/ab466d675e06052c21f7cc4df3656c91/?ssa=2c0a3e33-d3a4-4556-a23f-f5c549e27450&ssb=13477288840&ssc=https%3A%2F%2Fwww.spark.co.nz%2Fhelp%2Flandline%2Fset-up%2Ffibre-landline&ssi=d425f3cf-cv5f-4e15-a5f3-3d292ecee88e&ssk=botmanager_support@radware.com&ssm=12233076903685797103111778087848&ssn=cbbbd22d26055034689ef9a339584fc09c95eae440e8-ab87-4e6e-be7e0a&sso=c4b7be60-d630515803bc3898a795d022c1b22b18a4a1bb3c26646520&ssp=60090776451757629986175762600675139&ssq=46202677876717353993878767992996564496674&ssr=NjguMTU0LjEyMy4xMzc=&sst=node&ssu=&ssv=&ssw=&ssx=eyJ1em14IjoiN2Y5MDAwY2NmNDNlNWEtOTE4Yi00ZDYwLThmNGItMTgyODZkMWZiM2Y1MS0xNzU3Njc4NzY4MzMzMC02M2I0NTQ2NWY1YmMyM2E5MTAiLCJfX3V6bWYiOiI3ZjkwMDBlYWU0NDBlOC1hYjg3LTRlNmUtYmU2MC1kNjMwNTE1ODAzYmMxLTE3NTc2Nzg3NjgzMzMwLTAwMDk0M2UyMDZlODg1YzU4YjAxMCIsInJkIjoic3BhcmsuY28ubnoifQ==",
+      "url": "https://www.spark.co.nz/help/account/manage/manage-communications-from-spark",
       "source": "MANUAL",
       "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
-      "id": "9b211f8db330086c1f98fdb9d9dc0de3f361e857"
+      "id": "53abed8d86fa16e17f2730c9eba1dfd57034d9e8"
     },
     {
-      "url": "https://validate.perfdrive.com/ab466d675e06052c21f7cc4df3656c91/?ssa=49d7d6f5-5a8f-476a-a2a0-6216cbd4dfa5&ssb=76216204455&ssc=https%3A%2F%2Fwww.spark.co.nz%2Fhelp%2Fprivacy-and-safety%2Fmanage-your-privacy-and-security&ssi=708261cd-cv5f-4a9f-8171-23eb0ccbc2a4&ssk=botmanager_support@radware.com&ssm=01677672628876293102894306059973&ssn=bea53839ded0bc5b53f4ba20ead46691bcbfb1952b11-4915-4edc-b05141&sso=453288cb-9e7d6f67ceb47d18fecf55b1f8bb6cc5998ed9297ec67b72&ssp=95914455431757657113175767814234510&ssq=79104737877054735694378770142753535468190&ssr=MjAuMTYxLjgwLjIxMA==&sst=node&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDBiMTk1MmIxMS00OTE1LTRlZGMtYjhjYi05ZTdkNmY2N2NlYjQxLTE3NTc2Nzg3NzA1MTEwLTAwMDBiYjc5OTAzYmU0NjQ3Y2UxMCIsInV6bXgiOiI3ZjkwMDA2MGNiODIwZS00ZDc4LTRmMTktOTk3Ny1hMWJmMjEyMWQ0MmMxLTE3NTc2Nzg3NzA1MTEwLTljNDhmNzQyZjUwZWZiOTYxMCIsInJkIjoic3BhcmsuY28ubnoifQ==",
+      "url": "https://www.spark.co.nz/shop/message-us",
       "source": "MANUAL",
       "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
-      "id": "7553a9b7f8f5ce67eeaf598bd862fe7f23fbef2b"
+      "id": "b5493d8ce7bb8c0f337a57767588e92528388cc7"
     },
     {
-      "url": "https://validate.perfdrive.com/ab466d675e06052c21f7cc4df3656c91/?ssa=547aa336-1099-472e-be45-adfff2c02cb2&ssb=28730285119&ssc=https%3A%2F%2Fwww.spark.co.nz%2Fhelp%2Fget-more%2Fspotify%2Factivate-spotify&ssi=5704fbac-cv5f-4ffa-89a6-4d57124d393b&ssk=botmanager_support@radware.com&ssm=69708455443316425104025755454569&ssn=5131af5e611276d85041c704cc7edbee300498d38a0e-eda3-49d2-8091d7&sso=665a22d6-1a95de3667557298b3a12450d697d021c09ca26a6db825eb&ssp=60634730691757662259175767104310825&ssq=10352947876916270562378769299174015867657&ssr=MjAuMTYxLjgwLjIxMA==&sst=node&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDA5OGQzOGEwZS1lZGEzLTQ5ZDItODJkNi0xYTk1ZGUzNjY3NTUxLTE3NTc2Nzg3NzAxNDYwLTAwMDNkNzVmM2NjYjZkOWQ1NjUxMCIsInV6bXgiOiI3ZjkwMDBlNzhlMjQzZi1lZDczLTQxNDMtYjlkMy05NTAyOGNlYmM0MmExLTE3NTc2Nzg3NzAxNDYwLTc3OWIxNDQyNjEwY2EwOWYxMCIsInJkIjoic3BhcmsuY28ubnoifQ==",
+      "url": "https://www.spark.co.nz/help/get-more/spotify/activate-spotify",
       "source": "MANUAL",
       "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
-      "id": "40c22ca0a0a5390973e3d08a7939377a1e26ec15"
+      "id": "49137cfd2062bcc78660cc806f58b43e7d60787d"
     },
     {
-      "url": "https://validate.perfdrive.com/ab466d675e06052c21f7cc4df3656c91/?ssa=5b737bd3-ac5c-4d93-a690-ce354308c4aa&ssb=87957254704&ssc=https%3A%2F%2Fwww.spark.co.nz%2Fhelp%2Fmobile%2Fset-up%2Fone-number&ssi=726aa84b-cv5f-47f6-be7b-4d2f47309c84&ssk=botmanager_support@radware.com&ssm=09680964917896869109769593672813&ssn=0c8d3023241e9beffdc0c751aa75f34c4f6b8d2c4a82-aeb4-49f1-9c3dea&sso=31d3effa-2307b0fb2f84d6de6f85fae53f6006e26e24c23035371fde&ssp=84573017581757643407175762055206228&ssq=28489487876627683145778766375208417100358&ssr=MjAuMTYxLjgwLjIxMA==&sst=node&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDA4ZDJjNGE4Mi1hZWI0LTQ5ZjEtOWZmYS0yMzA3YjBmYjJmODQxLTE3NTc2Nzg3NjY5MzkwLTAwMDkwZmE1MjQ5NGYyNDdkMjkxMCIsInV6bXgiOiI3ZjkwMDAzMGZlYmU2Mi0zZjFiLTQ3ZjctYTE1ZC1iODM3YjAwNTZhOWUxLTE3NTc2Nzg3NjY5MzkwLWYyZjE1ZGY2ZDQwMjFhZTExMCIsInJkIjoic3BhcmsuY28ubnoifQ==",
+      "url": "https://www.spark.co.nz/help/landline/manage/codes-and-rates",
       "source": "MANUAL",
       "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
-      "id": "6eb5f30685ae65282fe53d2d3e5eafd814884b5b"
-    },
-    {
-      "url": "https://validate.perfdrive.com/ab466d675e06052c21f7cc4df3656c91/?ssa=751cc0ff-315c-4269-b642-42125dae87eb&ssb=76052253475&ssc=https%3A%2F%2Fwww.spark.co.nz%2Fhelp%2Faccount%2Fmanage%2Fmanage-communications-from-spark&ssi=5dc14a1d-cv5f-4327-ad2a-685cc6750d7f&ssk=botmanager_support@radware.com&ssm=94660622507903398105393295960636&ssn=3ff72198501127eaaf66e944642461a2bee4b1b40386-f631-458e-ac7c4a&sso=3209297a-e254c144551cec013748b4bdf8323f6a943fc84a1ca482e7&ssp=29686450031757650940175769971715039&ssq=67905837877160321617678771322500667023644&ssr=MjAuMTYxLjgwLjIxMA==&sst=node&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDBiMWI0MDM4Ni1mNjMxLTQ1OGUtYTk3YS1lMjU0YzE0NDU1MWMxLTE3NTc2Nzg3NzE5ODUwLTAwMDg2NjQ5MmEyMTRmYTc3ODMxMCIsInV6bXgiOiI3ZjkwMDBiOTViODNlYS02ZGRmLTQxNTgtODk3Yi1hZmY1MDQwNTE5MjMxLTE3NTc2Nzg3NzE5ODUwLTI0ZmQzYjc0NjY3NjMwNjQxMCIsInJkIjoic3BhcmsuY28ubnoifQ==",
-      "source": "MANUAL",
-      "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
-      "id": "bc89a1fbcf136b85b77078e40e38f2fb4abaca01"
-    },
-    {
-      "url": "https://validate.perfdrive.com/ab466d675e06052c21f7cc4df3656c91/?ssa=917ab2e8-ab02-43e9-9531-0fcb045ae583&ssb=68729241702&ssc=https%3A%2F%2Fwww.spark.co.nz%2Fhelp%2Fget-more%2Fnetflix%2Fset-up-netflix&ssi=7eccd464-cv5f-4554-a238-430d46c69fe3&ssk=botmanager_support@radware.com&ssm=97125786826517451105764861487647&ssn=484046990bbe153749daee22718973b37d96f41bc7b6-bd79-4345-91da38&sso=6b90002e-6d783d1f93b3946a5a95fcd6a90f445f6008dc6c04e6da11&ssp=87593985311757687712175764350865631&ssq=06135377876836212998078768203026757497106&ssr=MjAuMTYxLjgwLjIxMA==&sst=node&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDBmNDFiYzdiNi1iZDc5LTQzNDUtOTAyZS02ZDc4M2QxZjkzYjMxLTE3NTc2Nzg3NjkzNzkwLTAwMDY0MDRhZmJiMDQ1ODQ0NDAxMCIsInV6bXgiOiI3ZjkwMDA1MWUzZjQ0MS1jMTBjLTQ2ZjItOWVkMi1lZmQ4OTBhZDQ5MjgxLTE3NTc2Nzg3NjkzNzkwLTZlZTU0MDE4MzZkOTc4ZTQxMCIsInJkIjoic3BhcmsuY28ubnoifQ==",
-      "source": "MANUAL",
-      "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
-      "id": "a3ce5bb63446eabe5732ed86df79d88550674b29"
-    },
-    {
-      "url": "https://validate.perfdrive.com/ab466d675e06052c21f7cc4df3656c91/?ssa=987ae434-16ba-4996-ace6-d895acae1588&ssb=87957254704&ssc=https%3A%2F%2Fwww.spark.co.nz%2Fhelp%2Finternet%2Fset-up%2Fdns-settings&ssi=20c17e7d-cv5f-4473-9a5d-d04e1f5ff0a6&ssk=botmanager_support@radware.com&ssm=09680964917896869109769593672813&ssn=0c8d3023c301e4b1648d5ebc7475f34c4f6b5a9b6e3a-1f0e-470c-9c3dea&sso=31d3e151-98159b7218d4d6de6f85fd3f0385f219b838349435371fde&ssp=84573017581757643407175762055206228&ssq=28489487876627683145778766375208417100358&ssr=NjguMTU0LjEyMy4xMzc=&sst=node&ssu=&ssv=&ssw=&ssx=eyJ1em14IjoiN2Y5MDAwMzE3MTJkODUtNjg3ZS00ZmQ5LWE3MmUtZTE5NzVmYjFjNTE2MS0xNzU3Njc4NzY3MjE4MC0xNjc1ZTBmNGExZTZjMmU3MTAiLCJfX3V6bWYiOiI3ZjkwMDA1YTliNmUzYS0xZjBlLTQ3MGMtOTE1MS05ODE1OWI3MjE4ZDQxLTE3NTc2Nzg3NjcyMTgwLTAwMDdmODA1YzliYzJiYmNkN2IxMCIsInJkIjoic3BhcmsuY28ubnoifQ==",
-      "source": "MANUAL",
-      "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
-      "id": "4819c7a61ae01eb6c3c2c48d5cbae7da0fdcf3da"
-    },
-    {
-      "url": "https://validate.perfdrive.com/ab466d675e06052c21f7cc4df3656c91/?ssa=b0c6a791-2b9d-430f-ab2b-675466c28dce&ssb=76216204455&ssc=https%3A%2F%2Fwww.spark.co.nz%2Fshop%2Fmessage-us&ssi=58f90321-cv5f-4920-9dce-034b8689e2dd&ssk=botmanager_support@radware.com&ssm=01677672628876293102894306059973&ssn=bea5383999034cce438bd510badf6691bcbf352160d2-5005-4939-905141&sso=45328612-52298563fba57d18fecff348d1336d69ebb7bc7e7ec67b72&ssp=95914455431757657113175767814234510&ssq=79104737877054735694378770142753535468190&ssr=MjAuMTYxLjgwLjIxMA==&sst=node&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDAzNTIxNjBkMi01MDA1LTQ5MzktOTYxMi01MjI5ODU2M2ZiYTUxLTE3NTc2Nzg3NzEyMTYwLTAwMDg3MDdmNjIxMWZlMTNhM2ExMCIsInV6bXgiOiI3ZjkwMDA3ZmQ0MzRjYy1hM2Q1LTQ1ZjEtYThkZC0wZDFkZWExN2MwMGQxLTE3NTc2Nzg3NzEyMTYwLWM4Mzg3OTJjYTMxZTY0YWQxMCIsInJkIjoic3BhcmsuY28ubnoifQ==",
-      "source": "MANUAL",
-      "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
-      "id": "b26a6a1c8d1e11239b479c2481cbd6e72898039b"
-    },
-    {
-      "url": "https://validate.perfdrive.com/ab466d675e06052c21f7cc4df3656c91/?ssa=bff82349-b623-4d1f-ad69-ecc7bfb7e66e&ssb=76052253475&ssc=https%3A%2F%2Fwww.spark.co.nz%2Fhelp%2Faccount%2Fmanage%2Fcancel-account&ssi=46a279b7-cv5f-405b-a541-7e5cf24a9485&ssk=botmanager_support@radware.com&ssm=94660622507903398105393295960636&ssn=3ff72198e54743701f928f52292161a2bee452e55e2b-36d3-4223-8c7c4a&sso=32092907-3df2fca1d761ec0137481344ed401f2ca32158bc1ca482e7&ssp=29686450031757650940175769971715039&ssq=67905837877160321617678771322500667023644&ssr=MjAuMTYxLjgwLjIxMA==&sst=node&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDA1MmU1NWUyYi0zNmQzLTQyMjMtODkwNy0zZGYyZmNhMWQ3NjExLTE3NTc2Nzg3NzE2MzcwLTAwMGRhZjllYmRmMTFiZTU0YzExMCIsInV6bXgiOiI3ZjkwMDA4OTQzNjg0MC05ODRkLTQwNTctOGY1My03ZjAxMDE2ZDQ1NDMxLTE3NTc2Nzg3NzE2MzcwLWExYzMwYTE5MjVhYTY5ZDgxMCIsInJkIjoic3BhcmsuY28ubnoifQ==",
-      "source": "MANUAL",
-      "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
-      "id": "10ac85c8e94c8408a02d50b9a8b4018a6667cb3e"
-    },
-    {
-      "url": "https://validate.perfdrive.com/ab466d675e06052c21f7cc4df3656c91/?ssa=c6c3bef2-e404-4542-b3a1-b4ca6465c661&ssb=13477288840&ssc=https%3A%2F%2Fwww.spark.co.nz%2Fhelp%2Finternet%2Fset-up%2Fset-up-wireless-antenna&ssi=049f7a28-cv5f-4b09-83e6-c20cd738fe40&ssk=botmanager_support@radware.com&ssm=12233076903685797103111778087848&ssn=cbbbd22d0f68fe8deb2a5ad55f0d4fc09c959a268218-c695-4e85-ae7e0a&sso=c4b7b9da-bc751120ab633898a795f6eeba0a4bac73bc89fc26646520&ssp=60090776451757629986175762600675139&ssq=46202677876717353993878767992996564496674&ssr=MjAuMTYxLjgwLjIxMA==&sst=node&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDA5YTI2ODIxOC1jNjk1LTRlODUtYTlkYS1iYzc1MTEyMGFiNjMxLTE3NTc2Nzg3Njc0OTMwLTAwMGM5ODFiMjhiOWRmZWZlMzkxMCIsInV6bXgiOiI3ZjkwMDAwMzE5ZWM2NC0zZWIxLTRhNmMtYjIxOC1kOGI1OGJkMGIyNjkxLTE3NTc2Nzg3Njc0OTMwLTE3OGNlOGQ4NWI0YTdjODgxMCIsInJkIjoic3BhcmsuY28ubnoifQ==",
-      "source": "MANUAL",
-      "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
-      "id": "e69bdf0ae6fad57c837e1fb1816bec377a001d7d"
-    },
-    {
-      "url": "https://validate.perfdrive.com/ab466d675e06052c21f7cc4df3656c91/?ssa=caf35315-49e5-4b21-96b8-be93a18015b0&ssb=76052253475&ssc=https%3A%2F%2Fwww.spark.co.nz%2Fhelp%2Faccount%2Fmanage%2Fnotifications-during-unsociable-hours&ssi=ae042ad6-cv5f-46ab-9d42-06303e9c8507&ssk=botmanager_support@radware.com&ssm=94660622507903398105393295960636&ssn=3ff7219872276d1297308f81def061a2bee432300232-b50a-44d2-9c7c4a&sso=32092760-26f53b0b6a0aec013748e43ef9ffb72fe8f6d9d81ca482e7&ssp=29686450031757650940175769971715039&ssq=67905837877160321617678771322500667023644&ssr=MjAuMTYxLjgwLjIxMA==&sst=node&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDAzMjMwMDIzMi1iNTBhLTQ0ZDItOTc2MC0yNmY1M2IwYjZhMGExLTE3NTc2Nzg3NzI0MTEwLTAwMGJiY2RkNzE3OTFlZDBkOWExMCIsInV6bXgiOiI3ZjkwMDBlMjAzMzEyNC05YmYwLTRhMWItODlkYy1iMmYxMjRkZWY4ZTUxLTE3NTc2Nzg3NzI0MTEwLTM1NTQ3ZDkxY2UyYzk4YzgxMCIsInJkIjoic3BhcmsuY28ubnoifQ==",
-      "source": "MANUAL",
-      "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
-      "id": "9f37b844e9663a2fcdeb630d1b615d373126def1"
-    },
-    {
-      "url": "https://validate.perfdrive.com/ab466d675e06052c21f7cc4df3656c91/?ssa=cf519e8b-6249-4047-9019-55642b654cc2&ssb=13477288840&ssc=https%3A%2F%2Fwww.spark.co.nz%2Fhelp%2Flandline%2Fmanage%2Fcodes-and-rates&ssi=10005a71-cv5f-4654-9bfe-d30d5c6a4e98&ssk=botmanager_support@radware.com&ssm=12233076903685797103111778087848&ssn=cbbbd22dd069d613da4760fef9f74fc09c95f9bd4eb6-7b8e-4b2c-9e7e0a&sso=c4b7bec1-6969c683e0863898a79516e0b7d6050f924eb8ef26646520&ssp=60090776451757629986175762600675139&ssq=46202677876717353993878767992996564496674&ssr=MjAuMTYxLjgwLjIxMA==&sst=node&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDBmOWJkNGViNi03YjhlLTRiMmMtOWVjMS02OTY5YzY4M2UwODYxLTE3NTc2Nzg3NjgwNTIwLTAwMGM1ODIyNzA2NTk1NzYwYWExMCIsInV6bXgiOiI3ZjkwMDBhODZmMDViOS0zOGIyLTQyM2UtODgwMS04ZGM5MGJmNDg1ZDQxLTE3NTc2Nzg3NjgwNTIwLWNmMGQ5YjRlNTUzZjI5ZTQxMCIsInJkIjoic3BhcmsuY28ubnoifQ==",
-      "source": "MANUAL",
-      "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
-      "id": "e71ccd0a1088cca6e78acc6255d584bcfe6afac5"
-    },
-    {
-      "url": "https://validate.perfdrive.com/ab466d675e06052c21f7cc4df3656c91/?ssa=cf8da663-277d-4b3f-b72b-168a677c867e&ssb=28730285119&ssc=https%3A%2F%2Fwww.spark.co.nz%2Fhelp%2Fget-more%2Fsparkplug%2Fuse-sparkplug&ssi=85cd7fd0-cv5f-4696-ab24-d8c796d94ac8&ssk=botmanager_support@radware.com&ssm=69708455443316425104025755454569&ssn=5131af5e93330fe53135f8fb788cdbee300469976598-3693-44e1-9091d7&sso=665a2438-2c70873a21077298b3a123e48b4a5d636c4d42da6db825eb&ssp=60634730691757662259175767104310825&ssq=10352947876916270562378769299174015867657&ssr=MjAuMTYxLjgwLjIxMA==&sst=node&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDA2OTk3NjU5OC0zNjkzLTQ0ZTEtOTQzOC0yYzcwODczYTIxMDcxLTE3NTc2Nzg3Njk3OTQwLTAwMDdiYTI3MGY0MWJiNjIzMWUxMCIsInV6bXgiOiI3ZjkwMDA4MjU4ZmU3Mi0xNTdmLTRkZmItOTdiMC0yNDM2YjBiOGEzNWMxLTE3NTc2Nzg3Njk3OTQwLTc4MzAwMzdiZTc1N2M1YjExMCIsInJkIjoic3BhcmsuY28ubnoifQ==",
-      "source": "MANUAL",
-      "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
-      "id": "a1e50a57d698a7fa14d4646be87ea39ed2bb50e2"
-    },
-    {
-      "url": "https://validate.perfdrive.com/ab466d675e06052c21f7cc4df3656c91/?ssa=d5589f48-622a-42a9-9e4c-39603b222bb4&ssb=13477288840&ssc=https%3A%2F%2Fwww.spark.co.nz%2Fhelp%2Finternet%2Fmanage%2Fcancel-broadband&ssi=66e7d14a-cv5f-40db-af7f-2e58246dd554&ssk=botmanager_support@radware.com&ssm=12233076903685797103111778087848&ssn=cbbbd22db308c6c80fbcbe87535f4fc09c95e3a7e029-fef1-4906-ae7e0a&sso=c4b7b46f-5acc689598273898a795549e0045bd64cbba064626646520&ssp=60090776451757629986175762600675139&ssq=46202677876717353993878767992996564496674&ssr=NjguMTU0LjEyMy4xMzc=&sst=node&ssu=&ssv=&ssw=&ssx=eyJ1em14IjoiN2Y5MDAwN2FjMmVmMGUtZjAwZi00MGI4LTkxZjYtZTYxODE0NTgzNmExMS0xNzU3Njc4NzY3Nzc2MC04NzY0ZWNjZTZiMmU0YmI4MTAiLCJfX3V6bWYiOiI3ZjkwMDBlM2E3ZTAyOS1mZWYxLTQ5MDYtYTQ2Zi01YWNjNjg5NTk4MjcxLTE3NTc2Nzg3Njc3NzYwLTAwMDI4OGI3MzM4MWIwNGY2MTExMCIsInJkIjoic3BhcmsuY28ubnoifQ==",
-      "source": "MANUAL",
-      "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
-      "id": "9a9a39de661e0ea311feb45fef88aeb46a46a702"
-    },
-    {
-      "url": "https://validate.perfdrive.com/ab466d675e06052c21f7cc4df3656c91/?ssa=f2ea02fb-8f0f-425e-92ea-219be9d5cad4&ssb=76216204455&ssc=https%3A%2F%2Fwww.spark.co.nz%2Fhelp%2Fother%2Fwireless-fair-use&ssi=93c57d20-cv5f-41a4-bb8e-078e43946d24&ssk=botmanager_support@radware.com&ssm=01677672628876293102894306059973&ssn=bea53839f2cd504d6387413bae9f6691bcbf764fe498-741b-4822-905141&sso=453284b1-6590da959b7c7d18fecff9bbbe9bf9657736a7027ec67b72&ssp=95914455431757657113175767814234510&ssq=79104737877054735694378770142753535468190&ssr=MjAuMTYxLjgwLjIxMA==&sst=node&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDA3NjRmZTQ5OC03NDFiLTQ4MjItOTRiMS02NTkwZGE5NTliN2MxLTE3NTc2Nzg3NzA4NTgwLTAwMDIzMzZiMjY2NDJlN2ZhOWQxMCIsInV6bXgiOiI3ZjkwMDAyZTAwNDI5MS1mM2E3LTRkMTYtOWI5YS02ZTJlNjYzMTg1N2UxLTE3NTc2Nzg3NzA4NTgwLTc5NDBmODU4ZTBjYjNhN2QxMCIsInJkIjoic3BhcmsuY28ubnoifQ==",
-      "source": "MANUAL",
-      "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
-      "id": "67c7d5409da69c9215adc874c7b3c7090682b756"
-    },
-    {
-      "url": "https://validate.perfdrive.com/ab466d675e06052c21f7cc4df3656c91/?ssa=ffb5235c-9056-4fe4-8211-411438eb4e97&ssb=68729241702&ssc=https%3A%2F%2Fwww.spark.co.nz%2Fhelp%2Flandline%2Ftroubleshoot%2Ffix-my-fibre-landline&ssi=3d5e8d29-cv5f-4de9-a526-30d17dbd2c63&ssk=botmanager_support@radware.com&ssm=97125786826517451105764861487647&ssn=484046991e93abd4d6889bbd707973b37d9625e10ef6-0324-472b-a1da38&sso=6b900bc1-2c27d455c8c8946a5a9563dd4da015d5ff7a0b5104e6da11&ssp=87593985311757687712175764350865631&ssq=06135377876836212998078768203026757497106&ssr=MjAuMTYxLjgwLjIxMA==&sst=node&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDAyNWUxMGVmNi0wMzI0LTQ3MmItYWJjMS0yYzI3ZDQ1NWM4YzgxLTE3NTc2Nzg3Njg4MjQwLTAwMDNjNGIwMmQ4MjI4N2YzNGIxMCIsInV6bXgiOiI3ZjkwMDBlZjI0ZGY2Mi01ZDZlLTQyODMtYTA3YS05MWI0MzY3NDRlMjExLTE3NTc2Nzg3Njg4MjQwLTlmOTNlNDA5M2QxZTRkZjgxMCIsInJkIjoic3BhcmsuY28ubnoifQ==",
-      "source": "MANUAL",
-      "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
-      "id": "84407f8e3b108f8d7516459a7751d2656eeb9edf"
-    },
-    {
-      "url": "https://www.spark.co.nz/help/mobile/set-up/bring-your-number",
-      "source": "MANUAL",
-      "targetPath": "/help/mobile/set-up/bring-your-number",
-      "id": "208a54f8bf1268f18b8794669dcdfd8fe5f794c0"
+      "id": "e9fa237ef76dd92097fba705aba51496271a144e",
+      "status": "Excluded"
     },
     {
       "url": "https://www.spark.co.nz/help/mobile/set-up/set-up-mobile",
       "source": "MANUAL",
-      "targetPath": "/help/mobile/set-up/set-up-mobile",
-      "id": "b284b826cfcbf2696da0bfc535532c1ae5a9ce1d"
+      "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
+      "id": "62ffd2b927718e1058eaec6597ceff5b52bd36c4"
+    },
+    {
+      "url": "https://www.spark.co.nz/help/account/manage/cancel-account",
+      "source": "MANUAL",
+      "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
+      "id": "335b8563f3ad2568c5cfe9058d15c9dd56e15dcf"
+    },
+    {
+      "url": "https://www.spark.co.nz/help/internet/manage/cancel-broadband",
+      "source": "MANUAL",
+      "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
+      "id": "1c7acb936f2f36e0273ff2d306a1b4bc3b75ecb9"
+    },
+    {
+      "url": "https://www.spark.co.nz/help/get-more/netflix/set-up-netflix",
+      "source": "MANUAL",
+      "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
+      "id": "9586bc380a067eb8e84ecc61a08f8e4b2b3dc853"
+    },
+    {
+      "url": "https://www.spark.co.nz/help/mobile/set-up/bring-your-number",
+      "source": "MANUAL",
+      "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
+      "id": "4cc6b5c2d4f4f9cabc59823be9203f34fc45bd1c"
+    },
+    {
+      "url": "https://www.spark.co.nz/help/internet/set-up/set-up-wireless-antenna",
+      "source": "MANUAL",
+      "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
+      "id": "3aa7593ff3ab1451d4cbfeba79bfca73dc54e061"
+    },
+    {
+      "url": "https://www.spark.co.nz/help/landline/troubleshoot/fix-my-fibre-landline",
+      "source": "MANUAL",
+      "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
+      "id": "48b7b7828ebd6be68f4ef32103db1c9f3f0b772b"
+    },
+    {
+      "url": "https://www.spark.co.nz/help/landline/set-up/fibre-landline",
+      "source": "MANUAL",
+      "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
+      "id": "0bf95580b3ee6cd308c6c3831db084de17226a55"
+    },
+    {
+      "url": "https://www.spark.co.nz/help/mobile/set-up/one-number",
+      "source": "MANUAL",
+      "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
+      "id": "3cf765e898527a4892c319fe87a7ec5dd87a1d77"
+    },
+    {
+      "url": "https://www.spark.co.nz/help/privacy-and-safety/manage-your-privacy-and-security",
+      "source": "MANUAL",
+      "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
+      "id": "2f3f52297f3ada49dce32514cd74b0ba497a2b2b"
+    },
+    {
+      "url": "https://www.spark.co.nz/help/account/manage/notifications-during-unsociable-hours",
+      "source": "MANUAL",
+      "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
+      "id": "b0e8a2f852a1d5f5e3bc020f14fa1dd19c38c3ea"
+    },
+    {
+      "url": "https://www.spark.co.nz/help/get-more/sparkplug/use-sparkplug",
+      "source": "MANUAL",
+      "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
+      "id": "2d7299bfd9421c891e1849d390bfb8bebf97e355"
+    },
+    {
+      "url": "https://www.spark.co.nz/help/internet/set-up/dns-settings",
+      "source": "MANUAL",
+      "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
+      "id": "82580cd7197749410a9167c351a23320e35729bd"
+    },
+    {
+      "url": "https://www.spark.co.nz/help/other/wireless-fair-use",
+      "source": "MANUAL",
+      "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
+      "id": "afce7cb7f075b8243570bb435dc188e878bdf825"
     }
   ],
   "lastCrawled": null,
@@ -123,72 +123,5 @@
     "strategiesAttempted": [
       "MANUAL"
     ]
-  },
-  "extractionErrors": [
-    {
-      "message": "resource crawl error: Url https://www.spark.co.nz/help/mobile/set-up/one-number: 302 Moved Temporarily Redirect: https://validate.perfdrive.com/ab466d675e06052c21f7cc4df3656c91/?ssa=5b737bd3-ac5c-4d93-a690-ce354308c4aa&ssb=87957254704&ssc=https%3A%2F%2Fwww.spark.co.nz%2Fhelp%2Fmobile%2Fset-up%2Fone-number&ssi=726aa84b-cv5f-47f6-be7b-4d2f47309c84&ssk=botmanager_support@radware.com&ssm=09680964917896869109769593672813&ssn=0c8d3023241e9beffdc0c751aa75f34c4f6b8d2c4a82-aeb4-49f1-9c3dea&sso=31d3effa-2307b0fb2f84d6de6f85fae53f6006e26e24c23035371fde&ssp=84573017581757643407175762055206228&ssq=28489487876627683145778766375208417100358&ssr=MjAuMTYxLjgwLjIxMA==&sst=node&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDA4ZDJjNGE4Mi1hZWI0LTQ5ZjEtOWZmYS0yMzA3YjBmYjJmODQxLTE3NTc2Nzg3NjY5MzkwLTAwMDkwZmE1MjQ5NGYyNDdkMjkxMCIsInV6bXgiOiI3ZjkwMDAzMGZlYmU2Mi0zZjFiLTQ3ZjctYTE1ZC1iODM3YjAwNTZhOWUxLTE3NTc2Nzg3NjY5MzkwLWYyZjE1ZGY2ZDQwMjFhZTExMCIsInJkIjoic3BhcmsuY28ubnoifQ==",
-      "url": "https://www.spark.co.nz/help/mobile/set-up/one-number"
-    },
-    {
-      "message": "resource crawl error: Url https://www.spark.co.nz/help/internet/set-up/dns-settings: 302 Moved Temporarily Redirect: https://validate.perfdrive.com/ab466d675e06052c21f7cc4df3656c91/?ssa=987ae434-16ba-4996-ace6-d895acae1588&ssb=87957254704&ssc=https%3A%2F%2Fwww.spark.co.nz%2Fhelp%2Finternet%2Fset-up%2Fdns-settings&ssi=20c17e7d-cv5f-4473-9a5d-d04e1f5ff0a6&ssk=botmanager_support@radware.com&ssm=09680964917896869109769593672813&ssn=0c8d3023c301e4b1648d5ebc7475f34c4f6b5a9b6e3a-1f0e-470c-9c3dea&sso=31d3e151-98159b7218d4d6de6f85fd3f0385f219b838349435371fde&ssp=84573017581757643407175762055206228&ssq=28489487876627683145778766375208417100358&ssr=NjguMTU0LjEyMy4xMzc=&sst=node&ssu=&ssv=&ssw=&ssx=eyJ1em14IjoiN2Y5MDAwMzE3MTJkODUtNjg3ZS00ZmQ5LWE3MmUtZTE5NzVmYjFjNTE2MS0xNzU3Njc4NzY3MjE4MC0xNjc1ZTBmNGExZTZjMmU3MTAiLCJfX3V6bWYiOiI3ZjkwMDA1YTliNmUzYS0xZjBlLTQ3MGMtOTE1MS05ODE1OWI3MjE4ZDQxLTE3NTc2Nzg3NjcyMTgwLTAwMDdmODA1YzliYzJiYmNkN2IxMCIsInJkIjoic3BhcmsuY28ubnoifQ==",
-      "url": "https://www.spark.co.nz/help/internet/set-up/dns-settings"
-    },
-    {
-      "message": "resource crawl error: Url https://www.spark.co.nz/help/internet/set-up/set-up-wireless-antenna: 302 Moved Temporarily Redirect: https://validate.perfdrive.com/ab466d675e06052c21f7cc4df3656c91/?ssa=c6c3bef2-e404-4542-b3a1-b4ca6465c661&ssb=13477288840&ssc=https%3A%2F%2Fwww.spark.co.nz%2Fhelp%2Finternet%2Fset-up%2Fset-up-wireless-antenna&ssi=049f7a28-cv5f-4b09-83e6-c20cd738fe40&ssk=botmanager_support@radware.com&ssm=12233076903685797103111778087848&ssn=cbbbd22d0f68fe8deb2a5ad55f0d4fc09c959a268218-c695-4e85-ae7e0a&sso=c4b7b9da-bc751120ab633898a795f6eeba0a4bac73bc89fc26646520&ssp=60090776451757629986175762600675139&ssq=46202677876717353993878767992996564496674&ssr=MjAuMTYxLjgwLjIxMA==&sst=node&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDA5YTI2ODIxOC1jNjk1LTRlODUtYTlkYS1iYzc1MTEyMGFiNjMxLTE3NTc2Nzg3Njc0OTMwLTAwMGM5ODFiMjhiOWRmZWZlMzkxMCIsInV6bXgiOiI3ZjkwMDAwMzE5ZWM2NC0zZWIxLTRhNmMtYjIxOC1kOGI1OGJkMGIyNjkxLTE3NTc2Nzg3Njc0OTMwLTE3OGNlOGQ4NWI0YTdjODgxMCIsInJkIjoic3BhcmsuY28ubnoifQ==",
-      "url": "https://www.spark.co.nz/help/internet/set-up/set-up-wireless-antenna"
-    },
-    {
-      "message": "resource crawl error: Url https://www.spark.co.nz/help/internet/manage/cancel-broadband: 302 Moved Temporarily Redirect: https://validate.perfdrive.com/ab466d675e06052c21f7cc4df3656c91/?ssa=d5589f48-622a-42a9-9e4c-39603b222bb4&ssb=13477288840&ssc=https%3A%2F%2Fwww.spark.co.nz%2Fhelp%2Finternet%2Fmanage%2Fcancel-broadband&ssi=66e7d14a-cv5f-40db-af7f-2e58246dd554&ssk=botmanager_support@radware.com&ssm=12233076903685797103111778087848&ssn=cbbbd22db308c6c80fbcbe87535f4fc09c95e3a7e029-fef1-4906-ae7e0a&sso=c4b7b46f-5acc689598273898a795549e0045bd64cbba064626646520&ssp=60090776451757629986175762600675139&ssq=46202677876717353993878767992996564496674&ssr=NjguMTU0LjEyMy4xMzc=&sst=node&ssu=&ssv=&ssw=&ssx=eyJ1em14IjoiN2Y5MDAwN2FjMmVmMGUtZjAwZi00MGI4LTkxZjYtZTYxODE0NTgzNmExMS0xNzU3Njc4NzY3Nzc2MC04NzY0ZWNjZTZiMmU0YmI4MTAiLCJfX3V6bWYiOiI3ZjkwMDBlM2E3ZTAyOS1mZWYxLTQ5MDYtYTQ2Zi01YWNjNjg5NTk4MjcxLTE3NTc2Nzg3Njc3NzYwLTAwMDI4OGI3MzM4MWIwNGY2MTExMCIsInJkIjoic3BhcmsuY28ubnoifQ==",
-      "url": "https://www.spark.co.nz/help/internet/manage/cancel-broadband"
-    },
-    {
-      "message": "resource crawl error: Url https://www.spark.co.nz/help/landline/manage/codes-and-rates: 302 Moved Temporarily Redirect: https://validate.perfdrive.com/ab466d675e06052c21f7cc4df3656c91/?ssa=cf519e8b-6249-4047-9019-55642b654cc2&ssb=13477288840&ssc=https%3A%2F%2Fwww.spark.co.nz%2Fhelp%2Flandline%2Fmanage%2Fcodes-and-rates&ssi=10005a71-cv5f-4654-9bfe-d30d5c6a4e98&ssk=botmanager_support@radware.com&ssm=12233076903685797103111778087848&ssn=cbbbd22dd069d613da4760fef9f74fc09c95f9bd4eb6-7b8e-4b2c-9e7e0a&sso=c4b7bec1-6969c683e0863898a79516e0b7d6050f924eb8ef26646520&ssp=60090776451757629986175762600675139&ssq=46202677876717353993878767992996564496674&ssr=MjAuMTYxLjgwLjIxMA==&sst=node&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDBmOWJkNGViNi03YjhlLTRiMmMtOWVjMS02OTY5YzY4M2UwODYxLTE3NTc2Nzg3NjgwNTIwLTAwMGM1ODIyNzA2NTk1NzYwYWExMCIsInV6bXgiOiI3ZjkwMDBhODZmMDViOS0zOGIyLTQyM2UtODgwMS04ZGM5MGJmNDg1ZDQxLTE3NTc2Nzg3NjgwNTIwLWNmMGQ5YjRlNTUzZjI5ZTQxMCIsInJkIjoic3BhcmsuY28ubnoifQ==",
-      "url": "https://www.spark.co.nz/help/landline/manage/codes-and-rates"
-    },
-    {
-      "message": "resource crawl error: Url https://www.spark.co.nz/help/landline/set-up/fibre-landline: 302 Moved Temporarily Redirect: https://validate.perfdrive.com/ab466d675e06052c21f7cc4df3656c91/?ssa=2c0a3e33-d3a4-4556-a23f-f5c549e27450&ssb=13477288840&ssc=https%3A%2F%2Fwww.spark.co.nz%2Fhelp%2Flandline%2Fset-up%2Ffibre-landline&ssi=d425f3cf-cv5f-4e15-a5f3-3d292ecee88e&ssk=botmanager_support@radware.com&ssm=12233076903685797103111778087848&ssn=cbbbd22d26055034689ef9a339584fc09c95eae440e8-ab87-4e6e-be7e0a&sso=c4b7be60-d630515803bc3898a795d022c1b22b18a4a1bb3c26646520&ssp=60090776451757629986175762600675139&ssq=46202677876717353993878767992996564496674&ssr=NjguMTU0LjEyMy4xMzc=&sst=node&ssu=&ssv=&ssw=&ssx=eyJ1em14IjoiN2Y5MDAwY2NmNDNlNWEtOTE4Yi00ZDYwLThmNGItMTgyODZkMWZiM2Y1MS0xNzU3Njc4NzY4MzMzMC02M2I0NTQ2NWY1YmMyM2E5MTAiLCJfX3V6bWYiOiI3ZjkwMDBlYWU0NDBlOC1hYjg3LTRlNmUtYmU2MC1kNjMwNTE1ODAzYmMxLTE3NTc2Nzg3NjgzMzMwLTAwMDk0M2UyMDZlODg1YzU4YjAxMCIsInJkIjoic3BhcmsuY28ubnoifQ==",
-      "url": "https://www.spark.co.nz/help/landline/set-up/fibre-landline"
-    },
-    {
-      "message": "resource crawl error: Url https://www.spark.co.nz/help/landline/troubleshoot/fix-my-fibre-landline: 302 Moved Temporarily Redirect: https://validate.perfdrive.com/ab466d675e06052c21f7cc4df3656c91/?ssa=ffb5235c-9056-4fe4-8211-411438eb4e97&ssb=68729241702&ssc=https%3A%2F%2Fwww.spark.co.nz%2Fhelp%2Flandline%2Ftroubleshoot%2Ffix-my-fibre-landline&ssi=3d5e8d29-cv5f-4de9-a526-30d17dbd2c63&ssk=botmanager_support@radware.com&ssm=97125786826517451105764861487647&ssn=484046991e93abd4d6889bbd707973b37d9625e10ef6-0324-472b-a1da38&sso=6b900bc1-2c27d455c8c8946a5a9563dd4da015d5ff7a0b5104e6da11&ssp=87593985311757687712175764350865631&ssq=06135377876836212998078768203026757497106&ssr=MjAuMTYxLjgwLjIxMA==&sst=node&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDAyNWUxMGVmNi0wMzI0LTQ3MmItYWJjMS0yYzI3ZDQ1NWM4YzgxLTE3NTc2Nzg3Njg4MjQwLTAwMDNjNGIwMmQ4MjI4N2YzNGIxMCIsInV6bXgiOiI3ZjkwMDBlZjI0ZGY2Mi01ZDZlLTQyODMtYTA3YS05MWI0MzY3NDRlMjExLTE3NTc2Nzg3Njg4MjQwLTlmOTNlNDA5M2QxZTRkZjgxMCIsInJkIjoic3BhcmsuY28ubnoifQ==",
-      "url": "https://www.spark.co.nz/help/landline/troubleshoot/fix-my-fibre-landline"
-    },
-    {
-      "message": "resource crawl error: Url https://www.spark.co.nz/help/get-more/netflix/set-up-netflix: 302 Moved Temporarily Redirect: https://validate.perfdrive.com/ab466d675e06052c21f7cc4df3656c91/?ssa=917ab2e8-ab02-43e9-9531-0fcb045ae583&ssb=68729241702&ssc=https%3A%2F%2Fwww.spark.co.nz%2Fhelp%2Fget-more%2Fnetflix%2Fset-up-netflix&ssi=7eccd464-cv5f-4554-a238-430d46c69fe3&ssk=botmanager_support@radware.com&ssm=97125786826517451105764861487647&ssn=484046990bbe153749daee22718973b37d96f41bc7b6-bd79-4345-91da38&sso=6b90002e-6d783d1f93b3946a5a95fcd6a90f445f6008dc6c04e6da11&ssp=87593985311757687712175764350865631&ssq=06135377876836212998078768203026757497106&ssr=MjAuMTYxLjgwLjIxMA==&sst=node&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDBmNDFiYzdiNi1iZDc5LTQzNDUtOTAyZS02ZDc4M2QxZjkzYjMxLTE3NTc2Nzg3NjkzNzkwLTAwMDY0MDRhZmJiMDQ1ODQ0NDAxMCIsInV6bXgiOiI3ZjkwMDA1MWUzZjQ0MS1jMTBjLTQ2ZjItOWVkMi1lZmQ4OTBhZDQ5MjgxLTE3NTc2Nzg3NjkzNzkwLTZlZTU0MDE4MzZkOTc4ZTQxMCIsInJkIjoic3BhcmsuY28ubnoifQ==",
-      "url": "https://www.spark.co.nz/help/get-more/netflix/set-up-netflix"
-    },
-    {
-      "message": "resource crawl error: Url https://www.spark.co.nz/help/get-more/sparkplug/use-sparkplug: 302 Moved Temporarily Redirect: https://validate.perfdrive.com/ab466d675e06052c21f7cc4df3656c91/?ssa=cf8da663-277d-4b3f-b72b-168a677c867e&ssb=28730285119&ssc=https%3A%2F%2Fwww.spark.co.nz%2Fhelp%2Fget-more%2Fsparkplug%2Fuse-sparkplug&ssi=85cd7fd0-cv5f-4696-ab24-d8c796d94ac8&ssk=botmanager_support@radware.com&ssm=69708455443316425104025755454569&ssn=5131af5e93330fe53135f8fb788cdbee300469976598-3693-44e1-9091d7&sso=665a2438-2c70873a21077298b3a123e48b4a5d636c4d42da6db825eb&ssp=60634730691757662259175767104310825&ssq=10352947876916270562378769299174015867657&ssr=MjAuMTYxLjgwLjIxMA==&sst=node&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDA2OTk3NjU5OC0zNjkzLTQ0ZTEtOTQzOC0yYzcwODczYTIxMDcxLTE3NTc2Nzg3Njk3OTQwLTAwMDdiYTI3MGY0MWJiNjIzMWUxMCIsInV6bXgiOiI3ZjkwMDA4MjU4ZmU3Mi0xNTdmLTRkZmItOTdiMC0yNDM2YjBiOGEzNWMxLTE3NTc2Nzg3Njk3OTQwLTc4MzAwMzdiZTc1N2M1YjExMCIsInJkIjoic3BhcmsuY28ubnoifQ==",
-      "url": "https://www.spark.co.nz/help/get-more/sparkplug/use-sparkplug"
-    },
-    {
-      "message": "resource crawl error: Url https://www.spark.co.nz/help/get-more/spotify/activate-spotify: 302 Moved Temporarily Redirect: https://validate.perfdrive.com/ab466d675e06052c21f7cc4df3656c91/?ssa=547aa336-1099-472e-be45-adfff2c02cb2&ssb=28730285119&ssc=https%3A%2F%2Fwww.spark.co.nz%2Fhelp%2Fget-more%2Fspotify%2Factivate-spotify&ssi=5704fbac-cv5f-4ffa-89a6-4d57124d393b&ssk=botmanager_support@radware.com&ssm=69708455443316425104025755454569&ssn=5131af5e611276d85041c704cc7edbee300498d38a0e-eda3-49d2-8091d7&sso=665a22d6-1a95de3667557298b3a12450d697d021c09ca26a6db825eb&ssp=60634730691757662259175767104310825&ssq=10352947876916270562378769299174015867657&ssr=MjAuMTYxLjgwLjIxMA==&sst=node&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDA5OGQzOGEwZS1lZGEzLTQ5ZDItODJkNi0xYTk1ZGUzNjY3NTUxLTE3NTc2Nzg3NzAxNDYwLTAwMDNkNzVmM2NjYjZkOWQ1NjUxMCIsInV6bXgiOiI3ZjkwMDBlNzhlMjQzZi1lZDczLTQxNDMtYjlkMy05NTAyOGNlYmM0MmExLTE3NTc2Nzg3NzAxNDYwLTc3OWIxNDQyNjEwY2EwOWYxMCIsInJkIjoic3BhcmsuY28ubnoifQ==",
-      "url": "https://www.spark.co.nz/help/get-more/spotify/activate-spotify"
-    },
-    {
-      "message": "resource crawl error: Url https://www.spark.co.nz/help/privacy-and-safety/manage-your-privacy-and-security: 302 Moved Temporarily Redirect: https://validate.perfdrive.com/ab466d675e06052c21f7cc4df3656c91/?ssa=49d7d6f5-5a8f-476a-a2a0-6216cbd4dfa5&ssb=76216204455&ssc=https%3A%2F%2Fwww.spark.co.nz%2Fhelp%2Fprivacy-and-safety%2Fmanage-your-privacy-and-security&ssi=708261cd-cv5f-4a9f-8171-23eb0ccbc2a4&ssk=botmanager_support@radware.com&ssm=01677672628876293102894306059973&ssn=bea53839ded0bc5b53f4ba20ead46691bcbfb1952b11-4915-4edc-b05141&sso=453288cb-9e7d6f67ceb47d18fecf55b1f8bb6cc5998ed9297ec67b72&ssp=95914455431757657113175767814234510&ssq=79104737877054735694378770142753535468190&ssr=MjAuMTYxLjgwLjIxMA==&sst=node&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDBiMTk1MmIxMS00OTE1LTRlZGMtYjhjYi05ZTdkNmY2N2NlYjQxLTE3NTc2Nzg3NzA1MTEwLTAwMDBiYjc5OTAzYmU0NjQ3Y2UxMCIsInV6bXgiOiI3ZjkwMDA2MGNiODIwZS00ZDc4LTRmMTktOTk3Ny1hMWJmMjEyMWQ0MmMxLTE3NTc2Nzg3NzA1MTEwLTljNDhmNzQyZjUwZWZiOTYxMCIsInJkIjoic3BhcmsuY28ubnoifQ==",
-      "url": "https://www.spark.co.nz/help/privacy-and-safety/manage-your-privacy-and-security"
-    },
-    {
-      "message": "resource crawl error: Url https://www.spark.co.nz/help/other/wireless-fair-use: 302 Moved Temporarily Redirect: https://validate.perfdrive.com/ab466d675e06052c21f7cc4df3656c91/?ssa=f2ea02fb-8f0f-425e-92ea-219be9d5cad4&ssb=76216204455&ssc=https%3A%2F%2Fwww.spark.co.nz%2Fhelp%2Fother%2Fwireless-fair-use&ssi=93c57d20-cv5f-41a4-bb8e-078e43946d24&ssk=botmanager_support@radware.com&ssm=01677672628876293102894306059973&ssn=bea53839f2cd504d6387413bae9f6691bcbf764fe498-741b-4822-905141&sso=453284b1-6590da959b7c7d18fecff9bbbe9bf9657736a7027ec67b72&ssp=95914455431757657113175767814234510&ssq=79104737877054735694378770142753535468190&ssr=MjAuMTYxLjgwLjIxMA==&sst=node&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDA3NjRmZTQ5OC03NDFiLTQ4MjItOTRiMS02NTkwZGE5NTliN2MxLTE3NTc2Nzg3NzA4NTgwLTAwMDIzMzZiMjY2NDJlN2ZhOWQxMCIsInV6bXgiOiI3ZjkwMDAyZTAwNDI5MS1mM2E3LTRkMTYtOWI5YS02ZTJlNjYzMTg1N2UxLTE3NTc2Nzg3NzA4NTgwLTc5NDBmODU4ZTBjYjNhN2QxMCIsInJkIjoic3BhcmsuY28ubnoifQ==",
-      "url": "https://www.spark.co.nz/help/other/wireless-fair-use"
-    },
-    {
-      "message": "resource crawl error: Url https://www.spark.co.nz/shop/message-us: 302 Moved Temporarily Redirect: https://validate.perfdrive.com/ab466d675e06052c21f7cc4df3656c91/?ssa=b0c6a791-2b9d-430f-ab2b-675466c28dce&ssb=76216204455&ssc=https%3A%2F%2Fwww.spark.co.nz%2Fshop%2Fmessage-us&ssi=58f90321-cv5f-4920-9dce-034b8689e2dd&ssk=botmanager_support@radware.com&ssm=01677672628876293102894306059973&ssn=bea5383999034cce438bd510badf6691bcbf352160d2-5005-4939-905141&sso=45328612-52298563fba57d18fecff348d1336d69ebb7bc7e7ec67b72&ssp=95914455431757657113175767814234510&ssq=79104737877054735694378770142753535468190&ssr=MjAuMTYxLjgwLjIxMA==&sst=node&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDAzNTIxNjBkMi01MDA1LTQ5MzktOTYxMi01MjI5ODU2M2ZiYTUxLTE3NTc2Nzg3NzEyMTYwLTAwMDg3MDdmNjIxMWZlMTNhM2ExMCIsInV6bXgiOiI3ZjkwMDA3ZmQ0MzRjYy1hM2Q1LTQ1ZjEtYThkZC0wZDFkZWExN2MwMGQxLTE3NTc2Nzg3NzEyMTYwLWM4Mzg3OTJjYTMxZTY0YWQxMCIsInJkIjoic3BhcmsuY28ubnoifQ==",
-      "url": "https://www.spark.co.nz/shop/message-us"
-    },
-    {
-      "message": "resource crawl error: Url https://www.spark.co.nz/help/account/manage/cancel-account: 302 Moved Temporarily Redirect: https://validate.perfdrive.com/ab466d675e06052c21f7cc4df3656c91/?ssa=bff82349-b623-4d1f-ad69-ecc7bfb7e66e&ssb=76052253475&ssc=https%3A%2F%2Fwww.spark.co.nz%2Fhelp%2Faccount%2Fmanage%2Fcancel-account&ssi=46a279b7-cv5f-405b-a541-7e5cf24a9485&ssk=botmanager_support@radware.com&ssm=94660622507903398105393295960636&ssn=3ff72198e54743701f928f52292161a2bee452e55e2b-36d3-4223-8c7c4a&sso=32092907-3df2fca1d761ec0137481344ed401f2ca32158bc1ca482e7&ssp=29686450031757650940175769971715039&ssq=67905837877160321617678771322500667023644&ssr=MjAuMTYxLjgwLjIxMA==&sst=node&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDA1MmU1NWUyYi0zNmQzLTQyMjMtODkwNy0zZGYyZmNhMWQ3NjExLTE3NTc2Nzg3NzE2MzcwLTAwMGRhZjllYmRmMTFiZTU0YzExMCIsInV6bXgiOiI3ZjkwMDA4OTQzNjg0MC05ODRkLTQwNTctOGY1My03ZjAxMDE2ZDQ1NDMxLTE3NTc2Nzg3NzE2MzcwLWExYzMwYTE5MjVhYTY5ZDgxMCIsInJkIjoic3BhcmsuY28ubnoifQ==",
-      "url": "https://www.spark.co.nz/help/account/manage/cancel-account"
-    },
-    {
-      "message": "resource crawl error: Url https://www.spark.co.nz/help/account/manage/manage-communications-from-spark: 302 Moved Temporarily Redirect: https://validate.perfdrive.com/ab466d675e06052c21f7cc4df3656c91/?ssa=751cc0ff-315c-4269-b642-42125dae87eb&ssb=76052253475&ssc=https%3A%2F%2Fwww.spark.co.nz%2Fhelp%2Faccount%2Fmanage%2Fmanage-communications-from-spark&ssi=5dc14a1d-cv5f-4327-ad2a-685cc6750d7f&ssk=botmanager_support@radware.com&ssm=94660622507903398105393295960636&ssn=3ff72198501127eaaf66e944642461a2bee4b1b40386-f631-458e-ac7c4a&sso=3209297a-e254c144551cec013748b4bdf8323f6a943fc84a1ca482e7&ssp=29686450031757650940175769971715039&ssq=67905837877160321617678771322500667023644&ssr=MjAuMTYxLjgwLjIxMA==&sst=node&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDBiMWI0MDM4Ni1mNjMxLTQ1OGUtYTk3YS1lMjU0YzE0NDU1MWMxLTE3NTc2Nzg3NzE5ODUwLTAwMDg2NjQ5MmEyMTRmYTc3ODMxMCIsInV6bXgiOiI3ZjkwMDBiOTViODNlYS02ZGRmLTQxNTgtODk3Yi1hZmY1MDQwNTE5MjMxLTE3NTc2Nzg3NzE5ODUwLTI0ZmQzYjc0NjY3NjMwNjQxMCIsInJkIjoic3BhcmsuY28ubnoifQ==",
-      "url": "https://www.spark.co.nz/help/account/manage/manage-communications-from-spark"
-    },
-    {
-      "message": "resource crawl error: Url https://www.spark.co.nz/help/account/manage/notifications-during-unsociable-hours: 302 Moved Temporarily Redirect: https://validate.perfdrive.com/ab466d675e06052c21f7cc4df3656c91/?ssa=caf35315-49e5-4b21-96b8-be93a18015b0&ssb=76052253475&ssc=https%3A%2F%2Fwww.spark.co.nz%2Fhelp%2Faccount%2Fmanage%2Fnotifications-during-unsociable-hours&ssi=ae042ad6-cv5f-46ab-9d42-06303e9c8507&ssk=botmanager_support@radware.com&ssm=94660622507903398105393295960636&ssn=3ff7219872276d1297308f81def061a2bee432300232-b50a-44d2-9c7c4a&sso=32092760-26f53b0b6a0aec013748e43ef9ffb72fe8f6d9d81ca482e7&ssp=29686450031757650940175769971715039&ssq=67905837877160321617678771322500667023644&ssr=MjAuMTYxLjgwLjIxMA==&sst=node&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDAzMjMwMDIzMi1iNTBhLTQ0ZDItOTc2MC0yNmY1M2IwYjZhMGExLTE3NTc2Nzg3NzI0MTEwLTAwMGJiY2RkNzE3OTFlZDBkOWExMCIsInV6bXgiOiI3ZjkwMDBlMjAzMzEyNC05YmYwLTRhMWItODlkYy1iMmYxMjRkZWY4ZTUxLTE3NTc2Nzg3NzI0MTEwLTM1NTQ3ZDkxY2UyYzk4YzgxMCIsInJkIjoic3BhcmsuY28ubnoifQ==",
-      "url": "https://www.spark.co.nz/help/account/manage/notifications-during-unsociable-hours"
-    }
-  ],
-  "errorCountMessage": "{\"E_302\":16}"
+  }
 }
