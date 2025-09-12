@@ -1,54 +1,45 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Helper to extract all accordion items
-  const accordionContainer = element.querySelector('.one-spark-accordion-container');
-  if (!accordionContainer) return;
+  // Get all accordion panels
+  const panels = element.querySelectorAll('.panel.event-accordion-box');
 
-  // Get all panels (accordion items)
-  const panels = accordionContainer.querySelectorAll('.panel.event-accordion-box');
-
-  // Table header
+  // Table header row: single column
   const headerRow = ['Accordion (accordion5)'];
-  const rows = [headerRow];
+  const cells = [headerRow];
 
-  panels.forEach(panel => {
-    // Title cell: find the clickable title
-    const entry = panel.querySelector('.one-spark-accordion-entry');
+  panels.forEach((panel) => {
+    // Title cell: get h3 inside .accordion-toggle
     let titleCell = null;
-    if (entry) {
-      // Use the entire clickable header (h3 and any helptext)
-      const toggle = entry.querySelector('.accordion-toggle');
-      if (toggle) {
-        // Defensive: use only the h3 if present, else the toggle div
-        const h3 = toggle.querySelector('h3');
-        titleCell = h3 ? h3 : toggle;
+    const toggle = panel.querySelector('.accordion-toggle');
+    if (toggle) {
+      const h3 = toggle.querySelector('h3');
+      if (h3) {
+        titleCell = h3;
       } else {
-        titleCell = entry;
+        titleCell = document.createElement('div');
+        titleCell.textContent = toggle.textContent.trim();
       }
     } else {
-      titleCell = panel;
+      titleCell = document.createElement('div');
+      titleCell.textContent = panel.textContent.trim();
     }
 
-    // Content cell: find the expanded content
+    // Content cell: get .panel-body
     let contentCell = null;
-    const collapse = panel.querySelector('.panel-collapse');
-    if (collapse) {
-      const panelBody = collapse.querySelector('.panel-body');
-      if (panelBody) {
-        // Use the entire panel-body div for resilience
-        contentCell = panelBody;
-      } else {
-        contentCell = collapse;
-      }
+    const panelBody = panel.querySelector('.panel-body');
+    if (panelBody) {
+      contentCell = panelBody;
     } else {
-      contentCell = panel;
+      contentCell = document.createElement('div');
     }
 
-    rows.push([titleCell, contentCell]);
+    // Each row is an array of two cells
+    cells.push([titleCell, contentCell]);
   });
 
   // Create the block table
-  const block = WebImporter.DOMUtils.createTable(rows, document);
+  const block = WebImporter.DOMUtils.createTable(cells, document);
+
   // Replace the original element
   element.replaceWith(block);
 }

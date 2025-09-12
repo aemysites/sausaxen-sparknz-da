@@ -1,40 +1,49 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Defensive: ensure element exists and has children
-  if (!element || !element.children || element.children.length === 0) return;
+  // Defensive: Only proceed if element exists and has children
+  if (!element || !element.querySelectorAll) return;
 
-  // Header row as required
+  // Table header row
   const headerRow = ['Cards (cards6)'];
+  const rows = [headerRow];
 
   // Get all feature blocks (cards)
-  const cardEls = Array.from(element.querySelectorAll(':scope > .feature-block'));
+  const cardElements = element.querySelectorAll(':scope > .feature-block');
 
-  // Parse each card
-  const rows = cardEls.map(card => {
-    // Icon cell (first column)
-    const iconWrap = card.querySelector('.feature-icon-size');
-    // Defensive: fallback to first child if not found
-    const iconCell = iconWrap || card.firstElementChild;
+  cardElements.forEach((card) => {
+    // --- Icon cell ---
+    // Find the icon container and its child icon
+    const iconContainer = card.querySelector('.feature-icon-size');
+    let iconEl = null;
+    if (iconContainer) {
+      // Use the icon container directly (contains <i> icon)
+      iconEl = iconContainer;
+    }
 
-    // Text cell (second column)
-    // Title
-    const titleEl = card.querySelector('h3');
-    // Description
-    const descEl = card.querySelector('.description');
-    // Compose text cell
-    const textCellContent = [];
-    if (titleEl) textCellContent.push(titleEl);
-    if (descEl) textCellContent.push(descEl);
+    // --- Content cell ---
+    // Heading
+    const heading = card.querySelector('h3');
+    // Description paragraph
+    const desc = card.querySelector('.description p');
+    // CTA link
+    const cta = card.querySelector('.description a');
 
-    return [iconCell, textCellContent];
+    // Compose content cell
+    const contentParts = [];
+    if (heading) contentParts.push(heading);
+    if (desc) contentParts.push(desc);
+    if (cta) contentParts.push(cta);
+
+    // Defensive: If nothing found, skip this card
+    if (!iconEl && contentParts.length === 0) return;
+
+    rows.push([
+      iconEl,
+      contentParts
+    ]);
   });
 
-  // Compose table data
-  const cells = [headerRow, ...rows];
-
-  // Create block table
-  const block = WebImporter.DOMUtils.createTable(cells, document);
-
-  // Replace original element
+  // Create the block table
+  const block = WebImporter.DOMUtils.createTable(rows, document);
   element.replaceWith(block);
 }
