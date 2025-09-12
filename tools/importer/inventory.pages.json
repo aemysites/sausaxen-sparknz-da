@@ -1,0 +1,144 @@
+{
+  "templates": [
+    {
+      "name": "'Directory Listing'",
+      "cluster": 1,
+      "pages": [
+        {
+          "url": "https://www.spark.co.nz/help/mobile/set-up/one-number",
+          "uuid": "21f86ddc2bdc6a176e0a4b07dd08c55a466600f0"
+        },
+        {
+          "url": "https://www.spark.co.nz/help/mobile/set-up/set-up-mobile",
+          "uuid": "b284b826cfcbf2696da0bfc535532c1ae5a9ce1d"
+        },
+        {
+          "url": "https://www.spark.co.nz/help/mobile/set-up/bring-your-number",
+          "uuid": "208a54f8bf1268f18b8794669dcdfd8fe5f794c0"
+        }
+      ]
+    },
+    {
+      "name": "'Directory Listing'",
+      "cluster": 2,
+      "pages": [
+        {
+          "url": "https://www.spark.co.nz/help/internet/set-up/dns-settings",
+          "uuid": "c609df8f582c7c09fad0fbabbe6875b4a33ef0fa"
+        },
+        {
+          "url": "https://www.spark.co.nz/help/internet/set-up/set-up-wireless-antenna",
+          "uuid": "b941dee76958f7d86485719af585448974b2e851"
+        }
+      ]
+    },
+    {
+      "name": "'Footer Navigation Page'",
+      "cluster": 3,
+      "pages": [
+        {
+          "url": "https://www.spark.co.nz/help/get-more/sparkplug/use-sparkplug",
+          "uuid": "5c5cd43fe17ffa29cfb4389c2f615f54262408c4"
+        }
+      ]
+    },
+    {
+      "name": "'Category Overview Page'",
+      "cluster": 4,
+      "pages": [
+        {
+          "url": "https://www.spark.co.nz/help/privacy-and-safety/manage-your-privacy-and-security",
+          "uuid": "bf512f8cfc303f9b4246856a68052873a1977004"
+        }
+      ]
+    },
+    {
+      "name": "Footer Page Template",
+      "cluster": 5,
+      "pages": [
+        {
+          "url": "https://www.spark.co.nz/help/account/manage/cancel-account",
+          "uuid": "9d32931a0f32c8e54fbab53987c62da8e2cad03d"
+        },
+        {
+          "url": "https://www.spark.co.nz/help/account/manage/manage-communications-from-spark",
+          "uuid": "6b7762bd647b7b6f3701f85b88b3bd7931e184cf"
+        },
+        {
+          "url": "https://www.spark.co.nz/help/account/manage/notifications-during-unsociable-hours",
+          "uuid": "516c7b2ee9fbacd683f0137c37d35e106dab0111"
+        }
+      ]
+    },
+    {
+      "name": "'Dashboard Page'",
+      "cluster": 6,
+      "pages": [
+        {
+          "url": "https://www.spark.co.nz/help/landline/troubleshoot/fix-my-fibre-landline",
+          "uuid": "184f346d8f1d5621efc15bc8801bc48e1c213636"
+        }
+      ]
+    },
+    {
+      "name": "'Basic Content Page'",
+      "cluster": 7,
+      "pages": [
+        {
+          "url": "https://www.spark.co.nz/help/get-more/netflix/set-up-netflix",
+          "uuid": "556a6a37279a955d9e32f7e911503e079a097cb7"
+        }
+      ]
+    },
+    {
+      "name": "'Portfolio Showcase'",
+      "cluster": 8,
+      "pages": [
+        {
+          "url": "https://www.spark.co.nz/shop/message-us",
+          "uuid": "6d32b7510ee4b1378882fb98a53c4ff41bce6308"
+        }
+      ]
+    },
+    {
+      "name": "'Footer template'",
+      "cluster": 9,
+      "pages": [
+        {
+          "url": "https://www.spark.co.nz/help/get-more/spotify/activate-spotify",
+          "uuid": "88e837eed72de3212aa1b8211f9003ddc08226b9"
+        }
+      ]
+    },
+    {
+      "name": "'Footer-focused informational page'",
+      "cluster": 10,
+      "pages": [
+        {
+          "url": "https://www.spark.co.nz/help/other/wireless-fair-use",
+          "uuid": "72e0c99fb2d9f2845d2719bb883ea385f2f68e2c"
+        }
+      ]
+    },
+    {
+      "name": "Footer template",
+      "cluster": 11,
+      "pages": [
+        {
+          "url": "https://www.spark.co.nz/help/landline/set-up/fibre-landline",
+          "uuid": "14c95190f5ceabc42feb7afcd5838bbe7c7f27eb"
+        }
+      ]
+    },
+    {
+      "name": "'Footer template'",
+      "cluster": 12,
+      "pages": [
+        {
+          "url": "https://www.spark.co.nz/help/internet/manage/cancel-broadband",
+          "uuid": "62d1bf9f5734c4f3f7426d0975a3eaadb2f053f5"
+        }
+      ]
+    }
+  ]
+}
