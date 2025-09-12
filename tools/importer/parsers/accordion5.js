@@ -1,54 +1,43 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Helper to extract all accordion items
-  const accordionContainer = element.querySelector('.one-spark-accordion-container');
-  if (!accordionContainer) return;
+  // Helper to get all accordion panels
+  const accordionPanels = element.querySelectorAll('.panel.event-accordion-box');
+  const rows = [];
 
-  // Get all panels (accordion items)
-  const panels = accordionContainer.querySelectorAll('.panel.event-accordion-box');
+  // Header row as per block guidelines
+  rows.push(['Accordion (accordion5)']);
 
-  // Table header
-  const headerRow = ['Accordion (accordion5)'];
-  const rows = [headerRow];
-
-  panels.forEach(panel => {
-    // Title cell: find the clickable title
-    const entry = panel.querySelector('.one-spark-accordion-entry');
-    let titleCell = null;
-    if (entry) {
-      // Use the entire clickable header (h3 and any helptext)
-      const toggle = entry.querySelector('.accordion-toggle');
-      if (toggle) {
-        // Defensive: use only the h3 if present, else the toggle div
-        const h3 = toggle.querySelector('h3');
-        titleCell = h3 ? h3 : toggle;
+  accordionPanels.forEach((panel) => {
+    // Title cell: find the h3 inside the .accordion-toggle
+    let titleCell = '';
+    const toggle = panel.querySelector('.accordion-toggle');
+    if (toggle) {
+      const h3 = toggle.querySelector('h3');
+      if (h3) {
+        titleCell = h3;
       } else {
-        titleCell = entry;
+        // fallback: use toggle text
+        titleCell = toggle.textContent.trim();
       }
-    } else {
-      titleCell = panel;
     }
 
-    // Content cell: find the expanded content
-    let contentCell = null;
-    const collapse = panel.querySelector('.panel-collapse');
-    if (collapse) {
-      const panelBody = collapse.querySelector('.panel-body');
-      if (panelBody) {
-        // Use the entire panel-body div for resilience
-        contentCell = panelBody;
+    // Content cell: find the .panel-body (expanded content)
+    let contentCell = '';
+    const panelBody = panel.querySelector('.panel-body');
+    if (panelBody) {
+      // Use the .default-mobile-padding div if present for more focused content
+      const inner = panelBody.querySelector('.default-mobile-padding');
+      if (inner) {
+        contentCell = inner;
       } else {
-        contentCell = collapse;
+        contentCell = panelBody;
       }
-    } else {
-      contentCell = panel;
     }
 
     rows.push([titleCell, contentCell]);
   });
 
   // Create the block table
-  const block = WebImporter.DOMUtils.createTable(rows, document);
-  // Replace the original element
-  element.replaceWith(block);
+  const table = WebImporter.DOMUtils.createTable(rows, document);
+  element.replaceWith(table);
 }
