@@ -42,7 +42,8 @@ export const customTransformers = {
    * Removes unwanted navigation and header elements from the page
    * @param {Document} document - The document to transform
    */
-  removeUnwantedElements: (document) => {
+  removeUnwantedElements: (hookName, element, { document }) => {
+    if (hookName === 'beforeTransform') {
     try {
       document.querySelector(".help-left-navigation")?.remove();
       document.querySelector("#ces_holder")?.remove();
@@ -50,6 +51,7 @@ export const customTransformers = {
       document.querySelector(".help-search")?.remove();
     } catch (e) {
       // noop
+    }
     }
   },
 };
