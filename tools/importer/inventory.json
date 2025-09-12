@@ -62,7 +62,8 @@
           "uuid": "6d32b751-04-0440982c40999042df7c3125edfbc1de9ef93bd9",
           "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[5]/div[1]/div[6]/div[1]/div[2]/div[1]/p[3]"
         }
-      ]
+      ],
+      "key": "unknown9"
     },
     {
       "name": "Accordion",
@@ -89,7 +90,8 @@
           "uuid": "b284b826-01-96b7ab70877921933f7c4c35e1a361385ee2bb9f",
           "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[8]"
         }
-      ]
+      ],
+      "key": "unknown11"
     },
     {
       "name": "header",
