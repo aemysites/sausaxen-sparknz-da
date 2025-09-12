@@ -49,6 +49,7 @@ export const customTransformers = {
       document.querySelector("#ces_holder")?.remove();
       document.querySelector("#hmb-header")?.remove();
       document.querySelector(".help-search")?.remove();
+      document.querySelector("#desktop-header")?.remove();
     } catch (e) {
       // noop
     }
