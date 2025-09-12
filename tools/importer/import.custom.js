@@ -37,4 +37,19 @@ export const customElements = [];
 /**
  * Custom transformers
  */
-export const customTransformers = {};
+export const customTransformers = {
+  /**
+   * Removes unwanted navigation and header elements from the page
+   * @param {Document} document - The document to transform
+   */
+  removeUnwantedElements: (document) => {
+    try {
+      document.querySelector(".help-left-navigation")?.remove();
+      document.querySelector("#ces_holder")?.remove();
+      document.querySelector("#hmb-header")?.remove();
+      document.querySelector(".help-search")?.remove();
+    } catch (e) {
+      // noop
+    }
+  },
+};
