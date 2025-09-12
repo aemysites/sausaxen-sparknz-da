@@ -11,6 +11,8 @@
  * governing permissions and limitations under the License.
  */
 
+import { TransformHook } from '@adobe/aem-import';
+
 /**
  * A map of custom parser names to imported parser functions.
  *
@@ -42,7 +44,8 @@ export const customTransformers = {
    * Removes unwanted navigation and header elements from the page
    * @param {Document} document - The document to transform
    */
-  removeUnwantedElements: (document) => {
+  removeUnwantedElements: (hookName, element, { document }) => {
+    if (hookName === 'beforeTransform') {
     try {
       document.querySelector(".help-left-navigation")?.remove();
       document.querySelector("#ces_holder")?.remove();
@@ -51,5 +54,7 @@ export const customTransformers = {
     } catch (e) {
       // noop
     }
+    }
   },
 };
+
