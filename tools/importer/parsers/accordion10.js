@@ -1,46 +1,39 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Defensive: Find the main accordion container
-  const accordionData = element.querySelector('.event-accordion-data');
-  if (!accordionData) return;
-
-  // Get all accordion panels
-  const panels = accordionData.querySelectorAll('.panel.event-accordion-box');
-  if (!panels.length) return;
-
-  // Table header
+  // Find all accordion panels
+  const panels = element.querySelectorAll('.panel.event-accordion-box');
+  const rows = [];
+  // Block header row as per guidelines
   const headerRow = ['Accordion (accordion10)'];
-  const rows = [headerRow];
-
+  rows.push(headerRow);
   panels.forEach((panel) => {
-    // Title cell: find the clickable header
-    const entry = panel.querySelector('.one-spark-accordion-entry');
+    // Title cell: .one-spark-accordion-entry > .accordion-toggle > h3
     let titleCell = '';
+    const entry = panel.querySelector('.one-spark-accordion-entry');
     if (entry) {
-      // Use the h3 if present, fallback to textContent
-      const h3 = entry.querySelector('h3');
-      if (h3) {
-        titleCell = h3;
-      } else {
-        titleCell = entry.textContent.trim();
+      const toggle = entry.querySelector('.accordion-toggle');
+      if (toggle) {
+        const h3 = toggle.querySelector('h3');
+        if (h3) titleCell = h3;
       }
     }
-
-    // Content cell: find the panel body
+    // Content cell: .panel-collapse > .panel-body > .text > .default-mobile-padding
     let contentCell = '';
     const collapse = panel.querySelector('.panel-collapse');
     if (collapse) {
       const body = collapse.querySelector('.panel-body');
       if (body) {
-        // Use the entire body content for resilience
-        contentCell = body;
+        const text = body.querySelector('.text .default-mobile-padding');
+        if (text) contentCell = text;
       }
     }
-
-    rows.push([titleCell, contentCell]);
+    // Only add row if both title and content are found
+    if (titleCell && contentCell) {
+      rows.push([titleCell, contentCell]);
+    }
   });
-
-  // Create the block table
+  // Create the accordion block table
   const block = WebImporter.DOMUtils.createTable(rows, document);
+  // Replace the original element with the block
   element.replaceWith(block);
 }
