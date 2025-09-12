@@ -23,7 +23,8 @@
       "url": "https://www.spark.co.nz/help/landline/manage/codes-and-rates",
       "source": "MANUAL",
       "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
-      "id": "e9fa237ef76dd92097fba705aba51496271a144e"
+      "id": "e9fa237ef76dd92097fba705aba51496271a144e",
+      "status": "Excluded"
     },
     {
       "url": "https://www.spark.co.nz/help/mobile/set-up/set-up-mobile",
