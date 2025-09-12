@@ -1,54 +1,45 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Helper to extract all accordion items
+  // Find the accordion container
   const accordionContainer = element.querySelector('.one-spark-accordion-container');
   if (!accordionContainer) return;
 
-  // Get all panels (accordion items)
+  // Get all accordion panels
   const panels = accordionContainer.querySelectorAll('.panel.event-accordion-box');
+  if (!panels.length) return;
 
-  // Table header
+  // Table header: block name only, exactly one column
   const headerRow = ['Accordion (accordion5)'];
   const rows = [headerRow];
 
   panels.forEach(panel => {
-    // Title cell: find the clickable title
-    const entry = panel.querySelector('.one-spark-accordion-entry');
+    // Title cell: .one-spark-accordion-entry > .accordion-toggle > h3
     let titleCell = null;
+    const entry = panel.querySelector('.one-spark-accordion-entry');
     if (entry) {
-      // Use the entire clickable header (h3 and any helptext)
       const toggle = entry.querySelector('.accordion-toggle');
       if (toggle) {
-        // Defensive: use only the h3 if present, else the toggle div
         const h3 = toggle.querySelector('h3');
-        titleCell = h3 ? h3 : toggle;
-      } else {
-        titleCell = entry;
+        if (h3) titleCell = h3;
       }
-    } else {
-      titleCell = panel;
     }
+    if (!titleCell && entry) titleCell = entry;
 
-    // Content cell: find the expanded content
+    // Content cell: .panel-collapse > .panel-body
     let contentCell = null;
     const collapse = panel.querySelector('.panel-collapse');
     if (collapse) {
-      const panelBody = collapse.querySelector('.panel-body');
-      if (panelBody) {
-        // Use the entire panel-body div for resilience
-        contentCell = panelBody;
-      } else {
-        contentCell = collapse;
-      }
-    } else {
-      contentCell = panel;
+      const body = collapse.querySelector('.panel-body');
+      if (body) contentCell = body;
     }
+    if (!contentCell && collapse) contentCell = collapse;
 
-    rows.push([titleCell, contentCell]);
+    if (titleCell && contentCell) {
+      rows.push([titleCell, contentCell]);
+    }
   });
 
   // Create the block table
   const block = WebImporter.DOMUtils.createTable(rows, document);
-  // Replace the original element
   element.replaceWith(block);
 }
