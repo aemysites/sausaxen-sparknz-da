@@ -1,46 +1,44 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Defensive: Find the main accordion container
-  const accordionData = element.querySelector('.event-accordion-data');
-  if (!accordionData) return;
-
-  // Get all accordion panels
-  const panels = accordionData.querySelectorAll('.panel.event-accordion-box');
-  if (!panels.length) return;
-
-  // Table header
-  const headerRow = ['Accordion (accordion10)'];
-  const rows = [headerRow];
+  // Helper to get all accordion panels
+  const panels = element.querySelectorAll('.panel.event-accordion-box');
+  const rows = [];
+  // Header row as specified
+  rows.push(['Accordion (accordion10)']);
 
   panels.forEach((panel) => {
-    // Title cell: find the clickable header
-    const entry = panel.querySelector('.one-spark-accordion-entry');
-    let titleCell = '';
-    if (entry) {
-      // Use the h3 if present, fallback to textContent
-      const h3 = entry.querySelector('h3');
+    // Title cell: get the h3 inside the .accordion-toggle
+    const toggle = panel.querySelector('.accordion-toggle');
+    let titleCell;
+    if (toggle) {
+      const h3 = toggle.querySelector('h3');
       if (h3) {
         titleCell = h3;
       } else {
-        titleCell = entry.textContent.trim();
+        // fallback: use toggle text
+        titleCell = document.createElement('div');
+        titleCell.textContent = toggle.textContent.trim();
       }
+    } else {
+      // fallback: empty
+      titleCell = document.createElement('div');
     }
 
-    // Content cell: find the panel body
-    let contentCell = '';
-    const collapse = panel.querySelector('.panel-collapse');
-    if (collapse) {
-      const body = collapse.querySelector('.panel-body');
-      if (body) {
-        // Use the entire body content for resilience
-        contentCell = body;
-      }
+    // Content cell: get the .panel-body content
+    let contentCell;
+    const panelBody = panel.querySelector('.panel-body');
+    if (panelBody) {
+      // Use the entire panel-body as content
+      contentCell = panelBody;
+    } else {
+      // fallback: empty
+      contentCell = document.createElement('div');
     }
 
     rows.push([titleCell, contentCell]);
   });
 
   // Create the block table
-  const block = WebImporter.DOMUtils.createTable(rows, document);
-  element.replaceWith(block);
+  const table = WebImporter.DOMUtils.createTable(rows, document);
+  element.replaceWith(table);
 }

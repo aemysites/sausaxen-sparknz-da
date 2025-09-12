@@ -1,54 +1,53 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Helper to extract all accordion items
-  const accordionContainer = element.querySelector('.one-spark-accordion-container');
-  if (!accordionContainer) return;
+  // Helper to extract accordion items
+  function getAccordionItems(container) {
+    const items = [];
+    // Find all panels (each is an accordion item)
+    const panelEls = container.querySelectorAll('.panel.event-accordion-box');
+    panelEls.forEach(panel => {
+      // Title cell: find the clickable title
+      let titleEl = panel.querySelector('.one-spark-accordion-entry > .accordion-toggle > h3');
+      if (!titleEl) {
+        titleEl = panel.querySelector('h3');
+      }
+      // Get only the text content for the title cell
+      const titleText = titleEl ? titleEl.textContent.trim() : '';
+      // Content cell: find the content area
+      let contentEl = panel.querySelector('.panel-collapse .panel-body');
+      if (!contentEl) {
+        contentEl = panel.querySelector('.panel-collapse');
+      }
+      // If content is deeply nested, grab the innermost content block
+      if (contentEl) {
+        const innerContent = contentEl.querySelector('.default-mobile-padding');
+        if (innerContent) {
+          contentEl = innerContent;
+        }
+      }
+      // Defensive: if title or content missing, skip
+      if (titleText && contentEl) {
+        items.push([titleText, contentEl]);
+      }
+    });
+    return items;
+  }
 
-  // Get all panels (accordion items)
-  const panels = accordionContainer.querySelectorAll('.panel.event-accordion-box');
+  // Find the accordion container
+  let accordionContainer = element.querySelector('.one-spark-accordion-container');
+  if (!accordionContainer) {
+    accordionContainer = element;
+  }
 
-  // Table header
-  const headerRow = ['Accordion (accordion5)'];
+  // Build table rows
+  const headerRow = ['Accordion (accordion5)']; // Only one column in header row
   const rows = [headerRow];
-
-  panels.forEach(panel => {
-    // Title cell: find the clickable title
-    const entry = panel.querySelector('.one-spark-accordion-entry');
-    let titleCell = null;
-    if (entry) {
-      // Use the entire clickable header (h3 and any helptext)
-      const toggle = entry.querySelector('.accordion-toggle');
-      if (toggle) {
-        // Defensive: use only the h3 if present, else the toggle div
-        const h3 = toggle.querySelector('h3');
-        titleCell = h3 ? h3 : toggle;
-      } else {
-        titleCell = entry;
-      }
-    } else {
-      titleCell = panel;
-    }
-
-    // Content cell: find the expanded content
-    let contentCell = null;
-    const collapse = panel.querySelector('.panel-collapse');
-    if (collapse) {
-      const panelBody = collapse.querySelector('.panel-body');
-      if (panelBody) {
-        // Use the entire panel-body div for resilience
-        contentCell = panelBody;
-      } else {
-        contentCell = collapse;
-      }
-    } else {
-      contentCell = panel;
-    }
-
-    rows.push([titleCell, contentCell]);
-  });
+  const accordionItems = getAccordionItems(accordionContainer);
+  rows.push(...accordionItems);
 
   // Create the block table
   const block = WebImporter.DOMUtils.createTable(rows, document);
+
   // Replace the original element
   element.replaceWith(block);
 }
