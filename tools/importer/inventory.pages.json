@@ -1,7 +1,7 @@
 {
   "templates": [
     {
-      "name": "'Directory Listing'",
+      "name": "'Directory Listing Page'",
       "cluster": 1,
       "pages": [
         {
@@ -19,7 +19,7 @@
       ]
     },
     {
-      "name": "'Directory Listing'",
+      "name": "Dashboard Template",
       "cluster": 2,
       "pages": [
         {
@@ -33,7 +33,7 @@
       ]
     },
     {
-      "name": "'Footer Navigation Page'",
+      "name": "'Footer-focused layout'",
       "cluster": 3,
       "pages": [
         {
@@ -43,7 +43,7 @@
       ]
     },
     {
-      "name": "'Category Overview Page'",
+      "name": "\"Category Overview Page\"",
       "cluster": 4,
       "pages": [
         {
@@ -53,7 +53,7 @@
       ]
     },
     {
-      "name": "Footer Page Template",
+      "name": "'Footer page'",
       "cluster": 5,
       "pages": [
         {
@@ -71,7 +71,7 @@
       ]
     },
     {
-      "name": "'Dashboard Page'",
+      "name": "'Data Entry Page'",
       "cluster": 6,
       "pages": [
         {
@@ -101,7 +101,7 @@
       ]
     },
     {
-      "name": "'Footer template'",
+      "name": "\"Footer Navigation Template\"",
       "cluster": 9,
       "pages": [
         {
@@ -111,7 +111,7 @@
       ]
     },
     {
-      "name": "'Footer-focused informational page'",
+      "name": "'Corporate Information Page'",
       "cluster": 10,
       "pages": [
         {
@@ -131,7 +131,7 @@
       ]
     },
     {
-      "name": "'Footer template'",
+      "name": "'Footer layout'",
       "cluster": 12,
       "pages": [
         {
