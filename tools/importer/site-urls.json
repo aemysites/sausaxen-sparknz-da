@@ -5,110 +5,128 @@
       "url": "https://www.spark.co.nz/help/account/manage/manage-communications-from-spark",
       "source": "MANUAL",
       "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
-      "id": "53abed8d86fa16e17f2730c9eba1dfd57034d9e8"
+      "id": "53abed8d86fa16e17f2730c9eba1dfd57034d9e8",
+      "urlHash": "6b7762bd647b7b6f3701f85b88b3bd7931e184cf"
     },
     {
       "url": "https://www.spark.co.nz/shop/message-us",
       "source": "MANUAL",
       "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
-      "id": "b5493d8ce7bb8c0f337a57767588e92528388cc7"
+      "id": "b5493d8ce7bb8c0f337a57767588e92528388cc7",
+      "urlHash": "6d32b7510ee4b1378882fb98a53c4ff41bce6308"
     },
     {
       "url": "https://www.spark.co.nz/help/get-more/spotify/activate-spotify",
       "source": "MANUAL",
       "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
-      "id": "49137cfd2062bcc78660cc806f58b43e7d60787d"
+      "id": "49137cfd2062bcc78660cc806f58b43e7d60787d",
+      "urlHash": "88e837eed72de3212aa1b8211f9003ddc08226b9"
     },
     {
       "url": "https://www.spark.co.nz/help/landline/manage/codes-and-rates",
       "source": "MANUAL",
       "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
       "id": "e9fa237ef76dd92097fba705aba51496271a144e",
+      "urlHash": "a7abf59cd897be3ede54e07dce67038b92efb661",
       "status": "Excluded"
     },
     {
       "url": "https://www.spark.co.nz/help/mobile/set-up/set-up-mobile",
       "source": "MANUAL",
       "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
-      "id": "62ffd2b927718e1058eaec6597ceff5b52bd36c4"
+      "id": "62ffd2b927718e1058eaec6597ceff5b52bd36c4",
+      "urlHash": "b284b826cfcbf2696da0bfc535532c1ae5a9ce1d"
     },
     {
       "url": "https://www.spark.co.nz/help/account/manage/cancel-account",
       "source": "MANUAL",
       "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
-      "id": "335b8563f3ad2568c5cfe9058d15c9dd56e15dcf"
+      "id": "335b8563f3ad2568c5cfe9058d15c9dd56e15dcf",
+      "urlHash": "9d32931a0f32c8e54fbab53987c62da8e2cad03d"
     },
     {
       "url": "https://www.spark.co.nz/help/internet/manage/cancel-broadband",
       "source": "MANUAL",
       "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
-      "id": "1c7acb936f2f36e0273ff2d306a1b4bc3b75ecb9"
+      "id": "1c7acb936f2f36e0273ff2d306a1b4bc3b75ecb9",
+      "urlHash": "62d1bf9f5734c4f3f7426d0975a3eaadb2f053f5"
     },
     {
       "url": "https://www.spark.co.nz/help/get-more/netflix/set-up-netflix",
       "source": "MANUAL",
       "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
-      "id": "9586bc380a067eb8e84ecc61a08f8e4b2b3dc853"
+      "id": "9586bc380a067eb8e84ecc61a08f8e4b2b3dc853",
+      "urlHash": "556a6a37279a955d9e32f7e911503e079a097cb7"
     },
     {
       "url": "https://www.spark.co.nz/help/mobile/set-up/bring-your-number",
       "source": "MANUAL",
       "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
-      "id": "4cc6b5c2d4f4f9cabc59823be9203f34fc45bd1c"
+      "id": "4cc6b5c2d4f4f9cabc59823be9203f34fc45bd1c",
+      "urlHash": "208a54f8bf1268f18b8794669dcdfd8fe5f794c0"
     },
     {
       "url": "https://www.spark.co.nz/help/internet/set-up/set-up-wireless-antenna",
       "source": "MANUAL",
       "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
-      "id": "3aa7593ff3ab1451d4cbfeba79bfca73dc54e061"
+      "id": "3aa7593ff3ab1451d4cbfeba79bfca73dc54e061",
+      "urlHash": "b941dee76958f7d86485719af585448974b2e851"
     },
     {
       "url": "https://www.spark.co.nz/help/landline/troubleshoot/fix-my-fibre-landline",
       "source": "MANUAL",
       "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
-      "id": "48b7b7828ebd6be68f4ef32103db1c9f3f0b772b"
+      "id": "48b7b7828ebd6be68f4ef32103db1c9f3f0b772b",
+      "urlHash": "184f346d8f1d5621efc15bc8801bc48e1c213636"
     },
     {
       "url": "https://www.spark.co.nz/help/landline/set-up/fibre-landline",
       "source": "MANUAL",
       "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
-      "id": "0bf95580b3ee6cd308c6c3831db084de17226a55"
+      "id": "0bf95580b3ee6cd308c6c3831db084de17226a55",
+      "urlHash": "14c95190f5ceabc42feb7afcd5838bbe7c7f27eb"
     },
     {
       "url": "https://www.spark.co.nz/help/mobile/set-up/one-number",
       "source": "MANUAL",
       "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
-      "id": "3cf765e898527a4892c319fe87a7ec5dd87a1d77"
+      "id": "3cf765e898527a4892c319fe87a7ec5dd87a1d77",
+      "urlHash": "21f86ddc2bdc6a176e0a4b07dd08c55a466600f0"
     },
     {
       "url": "https://www.spark.co.nz/help/privacy-and-safety/manage-your-privacy-and-security",
       "source": "MANUAL",
       "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
-      "id": "2f3f52297f3ada49dce32514cd74b0ba497a2b2b"
+      "id": "2f3f52297f3ada49dce32514cd74b0ba497a2b2b",
+      "urlHash": "bf512f8cfc303f9b4246856a68052873a1977004"
     },
     {
       "url": "https://www.spark.co.nz/help/account/manage/notifications-during-unsociable-hours",
       "source": "MANUAL",
       "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
-      "id": "b0e8a2f852a1d5f5e3bc020f14fa1dd19c38c3ea"
+      "id": "b0e8a2f852a1d5f5e3bc020f14fa1dd19c38c3ea",
+      "urlHash": "516c7b2ee9fbacd683f0137c37d35e106dab0111"
     },
     {
       "url": "https://www.spark.co.nz/help/get-more/sparkplug/use-sparkplug",
       "source": "MANUAL",
       "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
-      "id": "2d7299bfd9421c891e1849d390bfb8bebf97e355"
+      "id": "2d7299bfd9421c891e1849d390bfb8bebf97e355",
+      "urlHash": "5c5cd43fe17ffa29cfb4389c2f615f54262408c4"
     },
     {
       "url": "https://www.spark.co.nz/help/internet/set-up/dns-settings",
       "source": "MANUAL",
       "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
-      "id": "82580cd7197749410a9167c351a23320e35729bd"
+      "id": "82580cd7197749410a9167c351a23320e35729bd",
+      "urlHash": "c609df8f582c7c09fad0fbabbe6875b4a33ef0fa"
     },
     {
       "url": "https://www.spark.co.nz/help/other/wireless-fair-use",
       "source": "MANUAL",
       "targetPath": "/ab466d675e06052c21f7cc4df3656c91",
-      "id": "afce7cb7f075b8243570bb435dc188e878bdf825"
+      "id": "afce7cb7f075b8243570bb435dc188e878bdf825",
+      "urlHash": "72e0c99fb2d9f2845d2719bb883ea385f2f68e2c"
     }
   ],
   "lastCrawled": null,
