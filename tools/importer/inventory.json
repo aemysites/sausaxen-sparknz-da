@@ -657,6 +657,18 @@
           "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[4]"
         }
       ]
+    },
+    {
+      "name": "new",
+      "cluster": 13,
+      "instances": [
+        {
+          "url": "https://www.spark.co.nz/help/landline/manage/codes-and-rates",
+          "urlHash": "a7abf59cd897be3ede54e07dce67038b92efb661",
+          "uuid": "a7abf59c-03-7f99589e3302b3d85dfdc68df9a934a747d33871",
+          "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[7]/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]"
+        }
+      ]
     }
   ],
   "outliers": [
@@ -1037,12 +1049,6 @@
       "urlHash": "a7abf59cd897be3ede54e07dce67038b92efb661",
       "uuid": "a7abf59c-02-56c373f09272e4c8144f514620556079b404888e",
       "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[7]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]"
-    },
-    {
-      "url": "https://www.spark.co.nz/help/landline/manage/codes-and-rates",
-      "urlHash": "a7abf59cd897be3ede54e07dce67038b92efb661",
-      "uuid": "a7abf59c-03-7f99589e3302b3d85dfdc68df9a934a747d33871",
-      "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[7]/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]"
     },
     {
       "url": "https://www.spark.co.nz/help/landline/manage/codes-and-rates",
