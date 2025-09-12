@@ -1,40 +1,44 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Defensive: ensure element exists and has children
-  if (!element || !element.children || element.children.length === 0) return;
+  // Helper to extract the icon as a standalone element (for the image/icon cell)
+  function extractIcon(featureBlock) {
+    const iconWrapper = featureBlock.querySelector('.feature-icon-size');
+    if (iconWrapper) {
+      return iconWrapper;
+    }
+    return document.createElement('span'); // fallback empty
+  }
 
-  // Header row as required
-  const headerRow = ['Cards (cards6)'];
+  // Helper to extract the text content (title, description, CTA)
+  function extractTextContent(featureBlock) {
+    const fragment = document.createDocumentFragment();
+    // Title (h3)
+    const title = featureBlock.querySelector('h3');
+    if (title) fragment.appendChild(title);
+    // Description (p)
+    const desc = featureBlock.querySelector('.description p');
+    if (desc) fragment.appendChild(desc);
+    // CTA (a.read-more)
+    const cta = featureBlock.querySelector('.description a.read-more');
+    if (cta) fragment.appendChild(cta);
+    return fragment;
+  }
 
   // Get all feature blocks (cards)
-  const cardEls = Array.from(element.querySelectorAll(':scope > .feature-block'));
+  const featureBlocks = element.querySelectorAll(':scope > .feature-block');
 
-  // Parse each card
-  const rows = cardEls.map(card => {
-    // Icon cell (first column)
-    const iconWrap = card.querySelector('.feature-icon-size');
-    // Defensive: fallback to first child if not found
-    const iconCell = iconWrap || card.firstElementChild;
+  // Build the table rows
+  const rows = [];
+  // Header row as per spec
+  rows.push(['Cards (cards6)']);
 
-    // Text cell (second column)
-    // Title
-    const titleEl = card.querySelector('h3');
-    // Description
-    const descEl = card.querySelector('.description');
-    // Compose text cell
-    const textCellContent = [];
-    if (titleEl) textCellContent.push(titleEl);
-    if (descEl) textCellContent.push(descEl);
-
-    return [iconCell, textCellContent];
+  featureBlocks.forEach((block) => {
+    const iconCell = extractIcon(block);
+    const textCell = extractTextContent(block);
+    rows.push([iconCell, textCell]);
   });
 
-  // Compose table data
-  const cells = [headerRow, ...rows];
-
-  // Create block table
-  const block = WebImporter.DOMUtils.createTable(cells, document);
-
-  // Replace original element
-  element.replaceWith(block);
+  // Create the table and replace the original element
+  const table = WebImporter.DOMUtils.createTable(rows, document);
+  element.replaceWith(table);
 }
