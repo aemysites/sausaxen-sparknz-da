@@ -1,40 +1,46 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Defensive: ensure element exists and has children
-  if (!element || !element.children || element.children.length === 0) return;
+  // Helper to extract icon (as element)
+  function getIcon(card) {
+    const iconDiv = card.querySelector('.feature-icon-size');
+    if (iconDiv) {
+      // Use the icon container directly (includes <i> icon)
+      return iconDiv;
+    }
+    return null;
+  }
 
-  // Header row as required
+  // Helper to extract text content (title, description, CTA)
+  function getTextContent(card) {
+    const frag = document.createDocumentFragment();
+
+    // Title (h3)
+    const heading = card.querySelector('h3');
+    if (heading) frag.appendChild(heading);
+
+    // Description (p)
+    const desc = card.querySelector('.description p');
+    if (desc) frag.appendChild(desc);
+
+    // CTA (a.read-more)
+    const cta = card.querySelector('.description a.read-more');
+    if (cta) frag.appendChild(cta);
+
+    return frag;
+  }
+
+  // Get all cards
+  const cards = Array.from(element.querySelectorAll(':scope > .feature-block'));
+
+  // Build table rows
   const headerRow = ['Cards (cards6)'];
-
-  // Get all feature blocks (cards)
-  const cardEls = Array.from(element.querySelectorAll(':scope > .feature-block'));
-
-  // Parse each card
-  const rows = cardEls.map(card => {
-    // Icon cell (first column)
-    const iconWrap = card.querySelector('.feature-icon-size');
-    // Defensive: fallback to first child if not found
-    const iconCell = iconWrap || card.firstElementChild;
-
-    // Text cell (second column)
-    // Title
-    const titleEl = card.querySelector('h3');
-    // Description
-    const descEl = card.querySelector('.description');
-    // Compose text cell
-    const textCellContent = [];
-    if (titleEl) textCellContent.push(titleEl);
-    if (descEl) textCellContent.push(descEl);
-
-    return [iconCell, textCellContent];
+  const rows = cards.map(card => {
+    const icon = getIcon(card);
+    const textContent = getTextContent(card);
+    return [icon, textContent];
   });
 
-  // Compose table data
   const cells = [headerRow, ...rows];
-
-  // Create block table
-  const block = WebImporter.DOMUtils.createTable(cells, document);
-
-  // Replace original element
-  element.replaceWith(block);
+  const table = WebImporter.DOMUtils.createTable(cells, document);
+  element.replaceWith(table);
 }

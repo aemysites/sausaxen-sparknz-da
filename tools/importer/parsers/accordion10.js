@@ -1,10 +1,10 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Defensive: Find the main accordion container
+  // Defensive: find the main accordion container
   const accordionData = element.querySelector('.event-accordion-data');
   if (!accordionData) return;
 
-  // Get all accordion panels
+  // Find all accordion panels
   const panels = accordionData.querySelectorAll('.panel.event-accordion-box');
   if (!panels.length) return;
 
@@ -12,12 +12,12 @@ export default function parse(element, { document }) {
   const headerRow = ['Accordion (accordion10)'];
   const rows = [headerRow];
 
-  panels.forEach((panel) => {
-    // Title cell: find the clickable header
+  panels.forEach(panel => {
+    // Title cell: find the clickable title
     const entry = panel.querySelector('.one-spark-accordion-entry');
     let titleCell = '';
     if (entry) {
-      // Use the h3 if present, fallback to textContent
+      // Prefer h3, fallback to textContent of entry
       const h3 = entry.querySelector('h3');
       if (h3) {
         titleCell = h3;
@@ -32,7 +32,7 @@ export default function parse(element, { document }) {
     if (collapse) {
       const body = collapse.querySelector('.panel-body');
       if (body) {
-        // Use the entire body content for resilience
+        // Use the inner content of panel-body
         contentCell = body;
       }
     }
@@ -42,5 +42,6 @@ export default function parse(element, { document }) {
 
   // Create the block table
   const block = WebImporter.DOMUtils.createTable(rows, document);
+  // Replace the original element
   element.replaceWith(block);
 }

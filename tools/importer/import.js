@@ -11,9 +11,9 @@
  */
 /* global WebImporter */
 /* eslint-disable no-console */
-import cards6Parser from './parsers/cards6.js';
 import accordion10Parser from './parsers/accordion10.js';
 import accordion5Parser from './parsers/accordion5.js';
+import cards6Parser from './parsers/cards6.js';
 import headerParser from './parsers/header.js';
 import metadataParser from './parsers/metadata.js';
 import cleanupTransformer from './transformers/cleanup.js';
@@ -30,9 +30,9 @@ import {
 
 const parsers = {
   metadata: metadataParser,
-  cards6: cards6Parser,
   accordion10: accordion10Parser,
   accordion5: accordion5Parser,
+  cards6: cards6Parser,
   ...customParsers,
 };
 
