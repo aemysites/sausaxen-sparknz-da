@@ -59,14 +59,68 @@
       ]
     },
     {
-      "name": "new",
+      "name": "Table",
       "cluster": 13,
+      "source": "Table",
+      "target": "Table (table13)",
+      "key": "table13",
       "instances": [
         {
           "url": "https://www.spark.co.nz/help/landline/manage/codes-and-rates",
           "urlHash": "a7abf59cd897be3ede54e07dce67038b92efb661",
           "uuid": "a7abf59c-03-7f99589e3302b3d85dfdc68df9a934a747d33871",
           "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[7]/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]"
+        }
+      ]
+    }
+    {
+      "name": "header",
+      "cluster": 4,
+      "source": "Header",
+      "target": "Header (header4)",
+      "key": "header4",
+      "instances": [
+        {
+          "url": "https://www.spark.co.nz/help/other/wireless-fair-use",
+          "urlHash": "72e0c99fb2d9f2845d2719bb883ea385f2f68e2c",
+          "uuid": "72e0c99f-00-4688e2414c06afbeb2b7d823e9c42a47e082f769",
+          "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[6]/div[1]/div[1]"
+        }
+      ]
+    },
+    {
+      "name": "Accordion",
+      "cluster": 5,
+      "source": "Accordion",
+      "target": "Accordion (accordion5)",
+      "key": "accordion5",
+      "instances": [
+        {
+          "url": "https://www.spark.co.nz/help/mobile/set-up/one-number",
+          "urlHash": "21f86ddc2bdc6a176e0a4b07dd08c55a466600f0",
+          "uuid": "21f86ddc-13-4e0967249a9546e31a85a32c0d6fca8da2c57941",
+          "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[7]/div[1]/div[14]"
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 6,
+      "source": "Cards",
+      "target": "Cards (cards6)",
+      "key": "cards6",
+      "instances": [
+        {
+          "url": "https://www.spark.co.nz/help/privacy-and-safety/manage-your-privacy-and-security",
+          "urlHash": "bf512f8cfc303f9b4246856a68052873a1977004",
+          "uuid": "bf512f8c-02-3a4a819564d2aed2c4a4990705c2d4e0bb1e23f4",
+          "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[7]/div[1]/div[3]/div[1]/div[2]"
+        },
+        {
+          "url": "https://www.spark.co.nz/shop/message-us",
+          "urlHash": "6d32b7510ee4b1378882fb98a53c4ff41bce6308",
+          "uuid": "6d32b751-05-d2e8bee74f09759388caf82e8984aeb2a4b80e28",
+          "xpath": "/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[5]/div[1]/div[6]/div[1]/div[2]/div[1]/p[5]"
         }
       ]
     }
