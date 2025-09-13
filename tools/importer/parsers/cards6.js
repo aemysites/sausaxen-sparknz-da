@@ -1,40 +1,57 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Defensive: ensure element exists and has children
-  if (!element || !element.children || element.children.length === 0) return;
+  // Helper to extract icon as an element (wrap <i> in a span for robustness)
+  function extractIcon(featureBlock) {
+    const iconDiv = featureBlock.querySelector('.feature-icon-size');
+    if (iconDiv) {
+      // Use the <i> element directly, but wrap in a span for layout consistency
+      const icon = iconDiv.querySelector('i');
+      if (icon) {
+        const span = document.createElement('span');
+        span.appendChild(icon);
+        return span;
+      }
+    }
+    return '';
+  }
 
-  // Header row as required
-  const headerRow = ['Cards (cards6)'];
-
-  // Get all feature blocks (cards)
-  const cardEls = Array.from(element.querySelectorAll(':scope > .feature-block'));
-
-  // Parse each card
-  const rows = cardEls.map(card => {
-    // Icon cell (first column)
-    const iconWrap = card.querySelector('.feature-icon-size');
-    // Defensive: fallback to first child if not found
-    const iconCell = iconWrap || card.firstElementChild;
-
-    // Text cell (second column)
-    // Title
-    const titleEl = card.querySelector('h3');
+  // Helper to extract text content (heading, description, CTA)
+  function extractTextContent(featureBlock) {
+    const fragment = document.createDocumentFragment();
+    // Heading
+    const heading = featureBlock.querySelector('h3');
+    if (heading) {
+      fragment.appendChild(heading);
+    }
     // Description
-    const descEl = card.querySelector('.description');
-    // Compose text cell
-    const textCellContent = [];
-    if (titleEl) textCellContent.push(titleEl);
-    if (descEl) textCellContent.push(descEl);
+    const descDiv = featureBlock.querySelector('.description');
+    if (descDiv) {
+      // Paragraph
+      const para = descDiv.querySelector('p');
+      if (para) fragment.appendChild(para);
+      // CTA link
+      const cta = descDiv.querySelector('a');
+      if (cta) fragment.appendChild(cta);
+    }
+    return fragment;
+  }
 
-    return [iconCell, textCellContent];
+  // Get all feature blocks
+  const featureBlocks = element.querySelectorAll(':scope > .feature-block');
+
+  // Build table rows
+  const rows = [];
+  // Header row
+  rows.push(['Cards (cards6)']);
+
+  featureBlocks.forEach((block) => {
+    const iconCell = extractIcon(block);
+    const textCell = extractTextContent(block);
+    rows.push([iconCell, textCell]);
   });
 
-  // Compose table data
-  const cells = [headerRow, ...rows];
-
-  // Create block table
-  const block = WebImporter.DOMUtils.createTable(cells, document);
-
-  // Replace original element
-  element.replaceWith(block);
+  // Create the table block
+  const table = WebImporter.DOMUtils.createTable(rows, document);
+  // Replace the original element
+  element.replaceWith(table);
 }

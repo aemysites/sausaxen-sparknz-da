@@ -1,46 +1,37 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Defensive: Find the main accordion container
-  const accordionData = element.querySelector('.event-accordion-data');
-  if (!accordionData) return;
-
-  // Get all accordion panels
-  const panels = accordionData.querySelectorAll('.panel.event-accordion-box');
-  if (!panels.length) return;
-
-  // Table header
+  // Helper to get all accordion panels
+  const panels = element.querySelectorAll('.panel.event-accordion-box');
+  const rows = [];
+  // Header row as required
   const headerRow = ['Accordion (accordion10)'];
-  const rows = [headerRow];
+  rows.push(headerRow);
 
   panels.forEach((panel) => {
-    // Title cell: find the clickable header
-    const entry = panel.querySelector('.one-spark-accordion-entry');
+    // Title cell: get the h3 inside .accordion-toggle
+    const toggle = panel.querySelector('.accordion-toggle');
     let titleCell = '';
-    if (entry) {
-      // Use the h3 if present, fallback to textContent
-      const h3 = entry.querySelector('h3');
+    if (toggle) {
+      const h3 = toggle.querySelector('h3');
       if (h3) {
         titleCell = h3;
       } else {
-        titleCell = entry.textContent.trim();
+        // fallback: use toggle textContent
+        titleCell = document.createTextNode(toggle.textContent.trim());
       }
     }
-
-    // Content cell: find the panel body
+    // Content cell: get the .panel-body (all content inside)
     let contentCell = '';
-    const collapse = panel.querySelector('.panel-collapse');
-    if (collapse) {
-      const body = collapse.querySelector('.panel-body');
-      if (body) {
-        // Use the entire body content for resilience
-        contentCell = body;
-      }
+    const panelBody = panel.querySelector('.panel-body');
+    if (panelBody) {
+      // Use the entire panel-body content as the content cell
+      contentCell = panelBody;
     }
-
     rows.push([titleCell, contentCell]);
   });
 
-  // Create the block table
+  // Create the table block
   const block = WebImporter.DOMUtils.createTable(rows, document);
+  // Replace the original element with the block
   element.replaceWith(block);
 }
