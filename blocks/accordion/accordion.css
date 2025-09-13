@@ -76,7 +76,6 @@
   background: #fff;
 }
 
-/* Flex ensures left/right alignment, min-height for even icon alignment */
 .accordion.accordion10 summary {
   display: flex;
   flex-direction: row;
@@ -92,12 +91,10 @@
   padding-right: 24px;
 }
 
-/* Ensure last row has no divider */
 .accordion.accordion10 details:last-child summary {
   border-bottom: none;
 }
 
-/* Remove browser marker in supported browsers */
 .accordion.accordion10 summary::-webkit-details-marker,
 .accordion.accordion10 summary::marker {
   display: none;
@@ -106,7 +103,6 @@
   padding: 0;
 }
 
-/* Headline left edge alignment, flex sizing for proper truncation and ellipsis if needed */
 .accordion.accordion10 summary h3 {
   margin: 0;
   padding-left: 24px;
@@ -124,9 +120,6 @@
   text-overflow: ellipsis;
 }
 
-/* Make sure the default marker is at the strict right edge by adding right padding to summary,
-   and padding for marker itself is zeroed */
-
 .accordion.accordion10 .accordion-item-body {
   padding: 0 24px 16px;
   background: #fff;
@@ -134,7 +127,6 @@
   color: var(--dark-color);
 }
 
-/* Responsive: reduce padding on small screens */
 @media (width <= 900px) {
   .accordion.accordion10 {
     max-width: 100%;
@@ -148,5 +140,108 @@
 
   .accordion.accordion10 summary {
     padding-right: 12px;
+  }
+}
+
+
+.accordion.accordion5 {
+  max-width: 780px;
+  width: 100%;
+  margin: 0 auto;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* Each FAQ item */
+.accordion.accordion5 details {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+
+/* Divider line between FAQ items */
+.accordion.accordion5 details:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+/* Summary row: Flex layout for precise alignment and compact spacing */
+.accordion.accordion5 summary,
+.accordion.accordion5 .accordion-item-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 22.4px;
+  color: #444;
+  font-weight: 600;
+  margin: 0;
+  padding: 8px 24px;
+  background: #fff;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  min-height: unset;
+  transition: background 0.2s;
+  box-sizing: border-box;
+  width: 100%;
+  gap: 12px;
+}
+
+/* Remove default marker, but style the chevron for subtlety and better vertical alignment */
+.accordion.accordion5 summary::-webkit-details-marker,
+.accordion.accordion5 summary::marker {
+  color: #B0B0B0;
+  font-size: 15px;
+  vertical-align: middle;
+  margin-left: 12px;
+}
+
+/* FAQ question text inside summary */
+.accordion.accordion5 summary p {
+  font-size: 16px;
+  line-height: 22.4px;
+  color: #444;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  flex: 1 1 0%;
+  text-align: left;
+  min-width: 0;
+
+  /* Ensures text truncates or wraps as needed */
+  white-space: normal;
+}
+
+/* FAQ answer/body */
+.accordion.accordion5 .accordion-item-body {
+  padding: 0 24px 10px;
+  font-size: 16px;
+  line-height: 22.4px;
+  color: #444;
+  background: #fff;
+}
+
+/* Keep background white on hover/focus */
+.accordion.accordion5 summary:focus,
+.accordion.accordion5 summary:hover {
+  background: #fff;
+}
+
+/* Responsive width and padding adjustments */
+@media (width <= 900px) {
+  .accordion.accordion5 {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .accordion.accordion5 summary,
+  .accordion.accordion5 .accordion-item-label,
+  .accordion.accordion5 .accordion-item-body {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
