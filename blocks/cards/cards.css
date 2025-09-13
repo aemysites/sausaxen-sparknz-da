@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 .cards > ul {
   list-style: none;
   margin: 0;
@@ -24,4 +25,139 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+}
+
+
+.cards.cards6 {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+}
+
+.cards.cards6 ul {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  gap: 32px 24px;
+
+  /* Make row gap larger for vertical breathing room */
+  padding: 0;
+  margin: 0 auto;
+  place-items: stretch center;
+  width: 100%;
+  max-width: 1100px;
+  box-sizing: border-box;
+}
+
+@media (width <= 1000px) {
+  .cards.cards6 ul {
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    max-width: 660px;
+  }
+}
+
+@media (width <= 700px) {
+  .cards.cards6 ul {
+    grid-template-columns: 1fr;
+    max-width: 96vw;
+    gap: 24px 0;
+  }
+}
+
+.cards.cards6 ul > li {
+  background: #fff;
+  border-radius: 32px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 1.8%);
+  border: none;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 34px 32px 28px;
+  min-height: 340px;
+  max-width: 360px;
+  box-sizing: border-box;
+}
+
+/* Card content vertical layout (headline, description, link stack) */
+.cards.cards6 ul > li .cards-card-body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Headline with extra spacing below underline */
+.cards.cards6 ul > li .cards-card-body:not(:first-child) h3 {
+  font-size: 29px;
+  font-weight: 700;
+  line-height: 1.14;
+  margin: 0 0 20px;
+  display: inline-block;
+  border-bottom: 1.5px solid transparent;
+  padding-bottom: 8px;
+}
+
+.cards.cards6 ul > li:nth-child(1) .cards-card-body:not(:first-child) h3,
+.cards.cards6 ul > li:nth-child(3) .cards-card-body:not(:first-child) h3,
+.cards.cards6 ul > li:nth-child(5) .cards-card-body:not(:first-child) h3 {
+  color: #F90;
+  border-bottom-color: #F90;
+}
+
+.cards.cards6 ul > li:nth-child(2) .cards-card-body:not(:first-child) h3,
+.cards.cards6 ul > li:nth-child(4) .cards-card-body:not(:first-child) h3,
+.cards.cards6 ul > li:nth-child(6) .cards-card-body:not(:first-child) h3 {
+  color: #551f8c;
+  border-bottom-color: #551f8c;
+}
+
+/* Description paragraph styling */
+.cards.cards6 ul > li .cards-card-body:not(:first-child) p {
+  font-size: 13px;
+  color: #b6b6b6;
+  line-height: 1.32;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+/* "Learn more" link styling: left aligned, small, close to paragraph */
+.cards.cards6 ul > li .cards-card-body .button-container a.button {
+  font-size: 11px;
+  color: #09c;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  text-align: left;
+  text-decoration: underline;
+  font-weight: 500;
+  line-height: 1.1;
+  vertical-align: baseline;
+}
+
+.cards.cards6 ul > li .cards-card-body .button-container a.button:hover,
+.cards.cards6 ul > li .cards-card-body .button-container a.button:focus {
+  color: #0074c2;
+  background: none;
+  border: none;
+}
+
+/* Consistent left alignment for all content in cards */
+.cards.cards6 ul > li .cards-card-body,
+.cards.cards6 ul > li .cards-card-body:not(:first-child) h3,
+.cards.cards6 ul > li .cards-card-body:not(:first-child) p,
+.cards.cards6 ul > li .cards-card-body .button-container {
+  text-align: left;
+}
+
+/* Remove extra space at end of last card if present */
+.cards.cards6 ul > li:last-child {
+  margin-bottom: 0;
 }
