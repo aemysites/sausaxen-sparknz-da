@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 .cards > ul {
   list-style: none;
   margin: 0;
@@ -28,125 +29,159 @@
 
 
 .cards.cards6 {
+  background: #fff;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0;
+  padding: 36px 0 32px;
 }
 
-/* Grid: dense, 3 columns, minimize all gaps */
 .cards.cards6 ul {
   display: grid;
-  grid-template-columns: repeat(3, minmax(290px, 1fr));
-  gap: 0 32px;
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 12px 32px; /* tighter vertical gap */
   list-style: none;
-  place-items: stretch stretch;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
-/* Responsive stacking */
-@media (width <= 1050px) {
-  .cards.cards6 ul {
-    grid-template-columns: repeat(2, minmax(260px, 1fr));
-    max-width: 720px;
-    column-gap: 20px;
-  }
-}
-
-@media (width <= 720px) {
+@media (width <= 900px) {
   .cards.cards6 ul {
     grid-template-columns: 1fr;
-    max-width: 96vw;
-    column-gap: 0;
+    gap: 24px;
   }
 }
 
-/* Card: dense, full height, no extra vertical space */
 .cards.cards6 ul > li {
-  background: none;
+  background: #fff;
   border: none;
   border-radius: 0;
   box-shadow: none;
-  padding: 0;
   min-width: 0;
-  min-height: 0;
-  height: 100%;
+  min-height: 350px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
   box-sizing: border-box;
-}
-
-/* Icon area: collapsed if no icon, so no vertical space wasted */
-.cards.cards6 ul > li > .cards-card-body:first-child {
-  width: 0;
-  height: 0;
-  margin: 0;
   padding: 0;
-  display: block;
-  overflow: hidden;
+  height: 100%;
 }
 
-/* Card content: tight, push content to top, no extra bottom spacing */
+/* ICON CIRCLE: center horizontally, tight below, space above with block alignment */
+.cards.cards6 ul > li > .cards-card-body:first-child {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 40px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  position: relative;
+}
+
+.cards.cards6 ul > li:nth-child(1) > .cards-card-body:first-child,
+.cards.cards6 ul > li:nth-child(3) > .cards-card-body:first-child,
+.cards.cards6 ul > li:nth-child(5) > .cards-card-body:first-child {
+  background: none;
+}
+
+.cards.cards6 ul > li:nth-child(1) > .cards-card-body:first-child::after,
+.cards.cards6 ul > li:nth-child(3) > .cards-card-body:first-child::after,
+.cards.cards6 ul > li:nth-child(5) > .cards-card-body:first-child::after {
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 8px;
+  width: 32px;
+  height: 32px;
+  background: #f90;
+  border-radius: 50%;
+  content: "";
+}
+
+.cards.cards6 ul > li:nth-child(2) > .cards-card-body:first-child,
+.cards.cards6 ul > li:nth-child(4) > .cards-card-body:first-child,
+.cards.cards6 ul > li:nth-child(6) > .cards-card-body:first-child {
+  background: none;
+}
+
+.cards.cards6 ul > li:nth-child(2) > .cards-card-body:first-child::after,
+.cards.cards6 ul > li:nth-child(4) > .cards-card-body:first-child::after,
+.cards.cards6 ul > li:nth-child(6) > .cards-card-body:first-child::after {
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 8px;
+  width: 32px;
+  height: 32px;
+  background: #61269a;
+  border-radius: 50%;
+  content: "";
+}
+
+/* Card content: left-aligned, tight gap to icon */
 .cards.cards6 ul > li > .cards-card-body:last-child {
-  padding: 0 24px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  flex: 1 1 auto;
   justify-content: flex-start;
+  gap: 4px;
   min-height: 220px;
+  box-sizing: border-box;
+  padding: 0;
+  margin-top: 28px; /* pulls content up closer to icon */
 }
 
-/* Headline: colored, bold, short thick underline, compact */
 .cards.cards6 ul > li > .cards-card-body:last-child h3 {
-  font-size: 18px;
-  line-height: 1.25;
+  font-size: 22px;
+  line-height: 1.2;
   font-weight: bold;
-  margin: 0 0 10px;
-  padding-bottom: 6px;
-  display: inline-block;
+  margin: 0 0 4px;
+  padding: 0;
   text-align: left;
-  border-bottom: 4px solid;
-  border-radius: 2px;
-  width: 38px;
-  min-width: 38px;
-  max-width: 80%;
+  border: none;
+  width: 100%;
+  max-width: 100%;
 }
 
-/* Orange headlines */
 .cards.cards6 ul > li:nth-child(1) > .cards-card-body:last-child h3,
 .cards.cards6 ul > li:nth-child(3) > .cards-card-body:last-child h3,
 .cards.cards6 ul > li:nth-child(5) > .cards-card-body:last-child h3 {
-  color: #F90;
-  border-bottom-color: #F90;
+  color: #f90;
 }
 
-/* Purple headlines */
 .cards.cards6 ul > li:nth-child(2) > .cards-card-body:last-child h3,
 .cards.cards6 ul > li:nth-child(4) > .cards-card-body:last-child h3,
 .cards.cards6 ul > li:nth-child(6) > .cards-card-body:last-child h3 {
-  color: #6A1B9A;
-  border-bottom-color: #6A1B9A;
+  color: #61269a;
 }
 
-/* Description: lighter gray, tight spacing */
 .cards.cards6 ul > li > .cards-card-body:last-child p {
-  color: #666;
-  font-size: 15px;
-  line-height: 1.44;
-  margin: 0 0 14px;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.58;
+  margin: 0;
   padding: 0;
   text-align: left;
 }
 
-/* "Learn more" link: blue, underline, left aligned */
+.cards.cards6 ul > li > .cards-card-body:last-child .button-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .cards.cards6 ul > li > .cards-card-body:last-child .button-container a.button {
-  font-size: 15px;
-  color: #0072CE;
+  font-size: 14px;
+  color: #00778b;
   background: none;
   border: none;
   box-shadow: none;
@@ -157,15 +192,11 @@
   font-weight: 500;
   line-height: 1.1;
   min-width: 0;
+  cursor: pointer;
+  display: inline;
 }
 
 .cards.cards6 ul > li > .cards-card-body:last-child .button-container a.button:hover,
 .cards.cards6 ul > li > .cards-card-body:last-child .button-container a.button:focus {
   color: #005fa3;
-}
-
-/* Remove any accidental spacing between stacked elements */
-.cards.cards6 ul > li > .cards-card-body:last-child > * {
-  margin-top: 0;
-  margin-bottom: 0;
 }
