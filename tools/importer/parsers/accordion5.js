@@ -1,54 +1,46 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Helper to extract all accordion items
-  const accordionContainer = element.querySelector('.one-spark-accordion-container');
-  if (!accordionContainer) return;
-
-  // Get all panels (accordion items)
-  const panels = accordionContainer.querySelectorAll('.panel.event-accordion-box');
+  // Helper to get all accordion panels
+  const accordionPanels = element.querySelectorAll('.panel.event-accordion-box');
 
   // Table header
   const headerRow = ['Accordion (accordion5)'];
-  const rows = [headerRow];
 
-  panels.forEach(panel => {
-    // Title cell: find the clickable title
-    const entry = panel.querySelector('.one-spark-accordion-entry');
-    let titleCell = null;
-    if (entry) {
-      // Use the entire clickable header (h3 and any helptext)
-      const toggle = entry.querySelector('.accordion-toggle');
-      if (toggle) {
-        // Defensive: use only the h3 if present, else the toggle div
-        const h3 = toggle.querySelector('h3');
-        titleCell = h3 ? h3 : toggle;
-      } else {
-        titleCell = entry;
-      }
-    } else {
-      titleCell = panel;
+  // Build rows for each accordion item
+  const rows = Array.from(accordionPanels).map(panel => {
+    // Title cell: find the .accordion-toggle and its h3
+    const toggle = panel.querySelector('.accordion-toggle');
+    let titleEl = null;
+    if (toggle) {
+      // Use the h3 as the title
+      titleEl = toggle.querySelector('h3');
+      // Defensive: fallback to toggle itself if h3 missing
+      if (!titleEl) titleEl = toggle;
     }
 
-    // Content cell: find the expanded content
-    let contentCell = null;
+    // Content cell: find the .panel-collapse and its .panel-body
     const collapse = panel.querySelector('.panel-collapse');
+    let contentEl = null;
     if (collapse) {
-      const panelBody = collapse.querySelector('.panel-body');
-      if (panelBody) {
-        // Use the entire panel-body div for resilience
-        contentCell = panelBody;
+      const body = collapse.querySelector('.panel-body');
+      if (body) {
+        // Use the full body block for resilience
+        contentEl = body;
       } else {
-        contentCell = collapse;
+        contentEl = collapse;
       }
-    } else {
-      contentCell = panel;
     }
 
-    rows.push([titleCell, contentCell]);
+    // Defensive: if either cell missing, use empty string
+    return [titleEl || '', contentEl || ''];
   });
 
-  // Create the block table
-  const block = WebImporter.DOMUtils.createTable(rows, document);
-  // Replace the original element
+  // Compose table data
+  const cells = [headerRow, ...rows];
+
+  // Create block table
+  const block = WebImporter.DOMUtils.createTable(cells, document);
+
+  // Replace original element
   element.replaceWith(block);
 }
