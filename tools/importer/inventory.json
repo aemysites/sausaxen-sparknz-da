@@ -73,11 +73,11 @@
       ]
     },
     {
-      "name": "header",
+      "name": "Hero",
       "cluster": 4,
-      "source": "Header",
-      "target": "Header (header4)",
-      "key": "header4",
+      "source": "Hero",
+      "target": "Hero (hero4)",
+      "key": "hero4",
       "instances": [
         {
           "url": "https://www.spark.co.nz/help/other/wireless-fair-use",
