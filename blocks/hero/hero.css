@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 .hero-container .hero-wrapper {
   max-width: unset;
   padding: 0;
@@ -51,124 +52,123 @@
   padding: 0;
 }
 
-
 .hero.hero4 {
-  width: 100vw;
-  min-height: 450px;
-  height: 450px;
-  box-sizing: border-box;
-  background-image: url('original_hero_image.jpg');
+  background-image: url('path/to/original-photo.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  width: 100vw;
+  min-height: 270px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding: 0;
+  justify-content: flex-start;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   position: relative;
 }
 
-/* main layout columns */
-.hero.hero4 > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-/* left column is just a spacer */
+/* Remove left gutter so content is tight to the edge */
 .hero.hero4 > div:first-child {
-  flex: 0 0 0px;
-  min-width: 0;
+  flex: 0 0 0;
   padding: 0;
   margin: 0;
+  display: none;
 }
 
-/* right column: content */
-.hero.hero4 > div:last-child {
-  flex: 1 1 550px;
+.hero.hero4 > div {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
-  z-index: 2;
-  padding: 0;
-  margin: 0;
-  min-width: 0;
+  align-items: stretch;
 }
 
-/* content block positioning: more inset, lower and right */
-.hero.hero4 > div:last-child > div {
-  margin: 0;
-  padding: 155px 0 0 180px;
-  max-width: 540px;
-  width: 100%;
+/* Ensure right content area stretches and is left-aligned */
+.hero.hero4 > div:nth-child(2) {
+  flex: 1 1 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: flex-start;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
 }
 
+/* Place text block higher and closer to the left edge */
+.hero.hero4 > div:nth-child(2) > div {
+  padding: 10px 0 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 420px;
+  min-width: 0;
+  width: 100%;
+}
+
+/* Headline: bold, purple box, max-width for 3-line segmentation */
+.hero.hero4 h2 {
+  margin: 0 0 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 2.1rem;
+  line-height: 1.13;
+  background: #7A1FA2;
+  color: #fff;
+  border-radius: 4px;
+  padding: 13px 24px 13px 15px;
+  max-width: 16ch;
+  letter-spacing: 1.2px;
+  text-align: left;
+  white-space: normal;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 8%);
+  word-break: keep-all;
+}
+
+/* Supporting text: visible, left-aligned, readable, with higher contrast and less margin */
+.hero.hero4 p {
+  background: none;
+  color: #fff;
+  margin: 4px 0 0;
+  padding: 0;
+  border-radius: 0;
+  font-size: 1.08rem;
+  font-weight: 400;
+  line-height: 1.32;
+  max-width: 98%;
+  text-align: left;
+  text-shadow: 0 2px 12px rgb(0 0 0 / 35%);
+  display: block;
+  opacity: 1;
+}
+
+/* Responsive adjustments */
 @media (width <= 900px) {
   .hero.hero4 {
     flex-direction: column;
-    min-height: 280px;
-    height: auto;
+    min-height: 140px;
+    width: 100vw;
   }
 
-  .hero.hero4 > div:last-child > div {
-    padding: 56px 4vw 0;
+  .hero.hero4 > div:first-child {
+    display: none;
+  }
+
+  .hero.hero4 > div:nth-child(2) > div {
+    padding: 8px 4vw 0;
     max-width: 97vw;
-  }
-}
-
-/* headline styling: tighter banner, less rounded, tighter lines */
-.hero.hero4 h2 {
-  margin: 0 0 3px;
-  font-weight: 800;
-  font-size: 2.4rem;
-  line-height: 1.02;
-  text-transform: uppercase;
-  letter-spacing: 0.01em;
-  text-align: left;
-  background: #6D28D9;
-  color: #fff;
-  border-radius: 2px;
-  width: fit-content;
-  max-width: 96%;
-  padding: 10px 18px 10px 16px;
-  box-shadow: 0 2px 12px rgb(0 0 0 / 4%);
-  white-space: pre-line;
-}
-
-/* supporting message: lighter overlay, tighter to headline */
-.hero.hero4 p {
-  background: rgb(0 0 0 / 54%);
-  margin-top: 1px;
-  margin-bottom: 0;
-  color: #fff;
-  padding: 9px 15px;
-  border-radius: 3px;
-  font-size: 1.04rem;
-  font-weight: 400;
-  line-height: 1.38;
-  box-shadow: 0 2px 12px rgb(0 0 0 / 7%);
-  max-width: 96%;
-  display: inline-block;
-  text-align: left;
-}
-
-@media (width <= 600px) {
-  .hero.hero4 > div:last-child > div {
-    padding-top: 18px;
-    padding-left: 4vw;
-    padding-right: 4vw;
   }
 
   .hero.hero4 h2 {
-    font-size: 1.18rem;
-    padding: 7px;
+    font-size: 1rem;
+    padding: 7px 6px;
+    max-width: 99vw;
   }
 
   .hero.hero4 p {
-    font-size: 0.97rem;
-    padding: 7px;
+    font-size: 0.95rem;
   }
 }
