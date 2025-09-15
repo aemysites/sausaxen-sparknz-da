@@ -1,53 +1,56 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
-  // Helper to get all accordion panels
-  const panels = element.querySelectorAll('.panel.event-accordion-box');
-  const rows = [];
-  // Header row as per block guidelines
-  rows.push(['Accordion (accordion10)']);
-
-  panels.forEach((panel) => {
-    // Title cell: find the clickable title
-    const entry = panel.querySelector('.one-spark-accordion-entry');
-    let titleEl = null;
-    if (entry) {
-      // The title is inside an h3 within the clickable div
-      const h3 = entry.querySelector('h3');
-      if (h3) {
-        titleEl = h3;
-      } else {
-        // Fallback: use the entry itself if h3 is missing
-        titleEl = entry;
-      }
-    }
-
-    // Content cell: find the collapsible content
-    let contentEl = null;
-    const collapse = panel.querySelector('.panel-collapse');
-    if (collapse) {
-      // The actual content is inside .panel-body > .text > .default-mobile-padding
-      const body = collapse.querySelector('.panel-body');
-      if (body) {
-        const text = body.querySelector('.text .default-mobile-padding');
-        if (text) {
-          contentEl = text;
-        } else {
-          // Fallback: use body itself
-          contentEl = body;
+  // Helper to extract accordion items
+  function getAccordionItems(container) {
+    const items = [];
+    // Find all panels (each is an accordion item)
+    const panels = container.querySelectorAll('.panel.event-accordion-box');
+    panels.forEach(panel => {
+      // Title: find the .one-spark-accordion-entry > .accordion-toggle > h3
+      const entry = panel.querySelector('.one-spark-accordion-entry');
+      let title = null;
+      if (entry) {
+        const toggle = entry.querySelector('.accordion-toggle');
+        if (toggle) {
+          title = toggle.querySelector('h3');
         }
-      } else {
-        contentEl = collapse;
       }
-    }
+      // Content: find the .panel-collapse > .panel-body > .text > .default-mobile-padding
+      let content = null;
+      const collapse = panel.querySelector('.panel-collapse');
+      if (collapse) {
+        const body = collapse.querySelector('.panel-body');
+        if (body) {
+          const text = body.querySelector('.text .default-mobile-padding');
+          if (text) {
+            content = text;
+          }
+        }
+      }
+      // Defensive: only add if title and content exist
+      if (title && content) {
+        items.push([title, content]);
+      }
+    });
+    return items;
+  }
 
-    // Defensive: only add row if both title and content exist
-    if (titleEl && contentEl) {
-      rows.push([titleEl, contentEl]);
-    }
-  });
+  // Find the accordion container
+  const accordionData = element.querySelector('.event-accordion-data');
+  if (!accordionData) return;
+
+  // Get all accordion items
+  const rows = getAccordionItems(accordionData);
+
+  // Build table cells: header + rows
+  const cells = [
+    ['Accordion (accordion10)'], // Block name header
+    ...rows
+  ];
 
   // Create the block table
-  const table = WebImporter.DOMUtils.createTable(rows, document);
+  const block = WebImporter.DOMUtils.createTable(cells, document);
+
   // Replace the original element
-  element.replaceWith(table);
+  element.replaceWith(block);
 }
