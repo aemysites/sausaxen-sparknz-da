@@ -33,170 +33,171 @@
   max-width: 1100px;
   margin: 0 auto;
   padding: 36px 0 32px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.cards.cards6 ul {
+/* Grid: 3 columns, compact gap, top aligned */
+.cards.cards6 > ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 1fr;
-  gap: 12px 32px; /* tighter vertical gap */
+  gap: 32px;
   list-style: none;
   margin: 0;
   padding: 0;
   width: 100%;
+  place-items: start start;
 }
 
 @media (width <= 900px) {
-  .cards.cards6 ul {
+  .cards.cards6 > ul {
     grid-template-columns: 1fr;
     gap: 24px;
   }
 }
 
-.cards.cards6 ul > li {
+/* Card: vertical stack, left aligned, compact padding */
+.cards.cards6 > ul > li {
   background: #fff;
   border: none;
   border-radius: 0;
   box-shadow: none;
   min-width: 0;
-  min-height: 350px;
+  min-height: 0;
+  box-sizing: border-box;
+  padding: 24px 20px 20px 24px;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: flex-start;
   justify-content: flex-start;
-  box-sizing: border-box;
-  padding: 0;
   height: 100%;
 }
 
-/* ICON CIRCLE: center horizontally, tight below, space above with block alignment */
-.cards.cards6 ul > li > .cards-card-body:first-child {
-  width: 100%;
+/* Icon placeholder: top left, always visible, with fallback min-height */
+.cards.cards6 > ul > li > .cards-card-body:first-child {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  margin: 0 0 12px;
   display: flex;
   align-items: flex-start;
-  justify-content: center;
-  height: 40px;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: 0;
+  justify-content: flex-start;
   position: relative;
-}
-
-.cards.cards6 ul > li:nth-child(1) > .cards-card-body:first-child,
-.cards.cards6 ul > li:nth-child(3) > .cards-card-body:first-child,
-.cards.cards6 ul > li:nth-child(5) > .cards-card-body:first-child {
-  background: none;
-}
-
-.cards.cards6 ul > li:nth-child(1) > .cards-card-body:first-child::after,
-.cards.cards6 ul > li:nth-child(3) > .cards-card-body:first-child::after,
-.cards.cards6 ul > li:nth-child(5) > .cards-card-body:first-child::after {
-  display: block;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 8px;
-  width: 32px;
-  height: 32px;
-  background: #f90;
   border-radius: 50%;
-  content: "";
+  background-color: transparent;
+
+  /* Fallback: show a colored circle if SVG is missing */
 }
 
-.cards.cards6 ul > li:nth-child(2) > .cards-card-body:first-child,
-.cards.cards6 ul > li:nth-child(4) > .cards-card-body:first-child,
-.cards.cards6 ul > li:nth-child(6) > .cards-card-body:first-child {
-  background: none;
+/* Show colored icon SVG or fallback circle per card */
+.cards.cards6 > ul > li:nth-child(1) > .cards-card-body:first-child {
+  background: #f7a600;
 }
 
-.cards.cards6 ul > li:nth-child(2) > .cards-card-body:first-child::after,
-.cards.cards6 ul > li:nth-child(4) > .cards-card-body:first-child::after,
-.cards.cards6 ul > li:nth-child(6) > .cards-card-body:first-child::after {
-  display: block;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 8px;
-  width: 32px;
-  height: 32px;
-  background: #61269a;
-  border-radius: 50%;
-  content: "";
+.cards.cards6 > ul > li:nth-child(2) > .cards-card-body:first-child {
+  background: #6a1bbf;
 }
 
-/* Card content: left-aligned, tight gap to icon */
-.cards.cards6 ul > li > .cards-card-body:last-child {
+.cards.cards6 > ul > li:nth-child(3) > .cards-card-body:first-child {
+  background: #f7a600;
+}
+
+.cards.cards6 > ul > li:nth-child(4) > .cards-card-body:first-child {
+  background: #6a1bbf;
+}
+
+.cards.cards6 > ul > li:nth-child(5) > .cards-card-body:first-child {
+  background: #f7a600;
+}
+
+.cards.cards6 > ul > li:nth-child(6) > .cards-card-body:first-child {
+  background: #6a1bbf;
+}
+
+.cards.cards6 > ul > li > .cards-card-body:first-child .colored-dot {
+  display: none;
+}
+
+/* Content: vertical stack, left aligned, compact gap */
+.cards.cards6 > ul > li > .cards-card-body:last-child {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 4px;
-  min-height: 220px;
+  gap: 10px;
+  min-height: 0;
   box-sizing: border-box;
   padding: 0;
-  margin-top: 28px; /* pulls content up closer to icon */
+  margin: 0;
 }
 
-.cards.cards6 ul > li > .cards-card-body:last-child h3 {
+/* Headline: left-aligned, colored, compact margin, thick underline via border */
+.cards.cards6 > ul > li > .cards-card-body:last-child h3 {
   font-size: 22px;
-  line-height: 1.2;
   font-weight: bold;
-  margin: 0 0 4px;
-  padding: 0;
   text-align: left;
-  border: none;
-  width: 100%;
-  max-width: 100%;
+  margin: 0 0 10px;
+  padding-bottom: 6px;
+  border-bottom: 4px solid #f7a600;
+  width: fit-content;
 }
 
-.cards.cards6 ul > li:nth-child(1) > .cards-card-body:last-child h3,
-.cards.cards6 ul > li:nth-child(3) > .cards-card-body:last-child h3,
-.cards.cards6 ul > li:nth-child(5) > .cards-card-body:last-child h3 {
-  color: #f90;
+/* Headline color and underline per card */
+.cards.cards6 > ul > li:nth-child(1) > .cards-card-body:last-child h3,
+.cards.cards6 > ul > li:nth-child(3) > .cards-card-body:last-child h3,
+.cards.cards6 > ul > li:nth-child(5) > .cards-card-body:last-child h3 {
+  color: #f7a600;
+  border-bottom-color: #f7a600;
 }
 
-.cards.cards6 ul > li:nth-child(2) > .cards-card-body:last-child h3,
-.cards.cards6 ul > li:nth-child(4) > .cards-card-body:last-child h3,
-.cards.cards6 ul > li:nth-child(6) > .cards-card-body:last-child h3 {
-  color: #61269a;
+.cards.cards6 > ul > li:nth-child(2) > .cards-card-body:last-child h3,
+.cards.cards6 > ul > li:nth-child(4) > .cards-card-body:last-child h3,
+.cards.cards6 > ul > li:nth-child(6) > .cards-card-body:last-child h3 {
+  color: #6a1bbf;
+  border-bottom-color: #6a1bbf;
 }
 
-.cards.cards6 ul > li > .cards-card-body:last-child p {
+/* Description paragraph: left aligned, compact spacing */
+.cards.cards6 > ul > li > .cards-card-body:last-child p {
   color: #333;
-  font-size: 16px;
-  line-height: 1.58;
+  font-size: 15px;
+  text-align: left;
+  margin: 0 0 8px;
+  padding: 0;
+}
+
+/* Button/link: left aligned, exact color, compact spacing */
+.cards.cards6 > ul > li > .cards-card-body:last-child .button-container {
+  width: 100%;
+  text-align: left;
   margin: 0;
   padding: 0;
-  text-align: left;
+  display: block;
 }
 
-.cards.cards6 ul > li > .cards-card-body:last-child .button-container {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.cards.cards6 ul > li > .cards-card-body:last-child .button-container a.button {
+.cards.cards6 > ul > li > .cards-card-body:last-child .button-container a.button {
   font-size: 14px;
-  color: #00778b;
+  color: #0096d7;
   background: none;
   border: none;
   box-shadow: none;
   margin: 0;
   padding: 0;
   text-align: left;
-  text-decoration: underline;
   font-weight: 500;
   line-height: 1.1;
   min-width: 0;
   cursor: pointer;
   display: inline;
+  text-decoration: none;
 }
 
-.cards.cards6 ul > li > .cards-card-body:last-child .button-container a.button:hover,
-.cards.cards6 ul > li > .cards-card-body:last-child .button-container a.button:focus {
-  color: #005fa3;
+.cards.cards6 > ul > li > .cards-card-body:last-child .button-container a.button:hover,
+.cards.cards6 > ul > li > .cards-card-body:last-child .button-container a.button:focus {
+  color: #0096d7;
+  text-decoration: underline;
 }
