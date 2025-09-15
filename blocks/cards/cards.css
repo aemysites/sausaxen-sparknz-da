@@ -29,175 +29,166 @@
 
 
 .cards.cards6 {
-  background: #fff;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 36px 0 32px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px 0 24px;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  display: block;
 }
 
-/* Grid: 3 columns, compact gap, top aligned */
-.cards.cards6 > ul {
+/* Improved Grid: full width, even columns, center items in grid cells */
+.cards.cards6 ul {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  list-style: none;
-  margin: 0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px 12px;
+  place-items: start center;
   padding: 0;
+  margin: 0;
+  list-style: none;
   width: 100%;
-  place-items: start start;
+  box-sizing: border-box;
 }
 
+/* Responsive stacking for mobile */
 @media (width <= 900px) {
-  .cards.cards6 > ul {
+  .cards.cards6 ul {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 16px;
+    width: 100%;
+    justify-items: center;
+    margin: 0;
+  }
+
+  .cards.cards6 li {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
   }
 }
 
-/* Card: vertical stack, left aligned, compact padding */
-.cards.cards6 > ul > li {
-  background: #fff;
+/* Individual card styling */
+.cards.cards6 li {
   border: none;
-  border-radius: 0;
-  box-shadow: none;
-  min-width: 0;
-  min-height: 0;
-  box-sizing: border-box;
-  padding: 24px 20px 20px 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  height: 100%;
-}
-
-/* Icon placeholder: top left, always visible, with fallback min-height */
-.cards.cards6 > ul > li > .cards-card-body:first-child {
-  width: 40px;
-  height: 40px;
-  min-width: 40px;
-  min-height: 40px;
-  margin: 0 0 12px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: relative;
-  border-radius: 50%;
-  background-color: transparent;
-
-  /* Fallback: show a colored circle if SVG is missing */
-}
-
-/* Show colored icon SVG or fallback circle per card */
-.cards.cards6 > ul > li:nth-child(1) > .cards-card-body:first-child {
-  background: #f7a600;
-}
-
-.cards.cards6 > ul > li:nth-child(2) > .cards-card-body:first-child {
-  background: #6a1bbf;
-}
-
-.cards.cards6 > ul > li:nth-child(3) > .cards-card-body:first-child {
-  background: #f7a600;
-}
-
-.cards.cards6 > ul > li:nth-child(4) > .cards-card-body:first-child {
-  background: #6a1bbf;
-}
-
-.cards.cards6 > ul > li:nth-child(5) > .cards-card-body:first-child {
-  background: #f7a600;
-}
-
-.cards.cards6 > ul > li:nth-child(6) > .cards-card-body:first-child {
-  background: #6a1bbf;
-}
-
-.cards.cards6 > ul > li > .cards-card-body:first-child .colored-dot {
-  display: none;
-}
-
-/* Content: vertical stack, left aligned, compact gap */
-.cards.cards6 > ul > li > .cards-card-body:last-child {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 10px;
-  min-height: 0;
-  box-sizing: border-box;
-  padding: 0;
+  background: #fff;
+  width: 265px;
+  min-height: 245px;
   margin: 0;
+  padding: 18px 14px 20px 18px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
-/* Headline: left-aligned, colored, compact margin, thick underline via border */
-.cards.cards6 > ul > li > .cards-card-body:last-child h3 {
-  font-size: 22px;
+/* Icon column: fixed width, left-aligned */
+.cards.cards6 .cards-card-body:first-child {
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 14px;
+  margin-top: 0;
+  background: transparent;
+}
+
+/* Icon backgrounds (for demo) */
+.cards.cards6 ul > li:nth-child(1) .cards-card-body:first-child {
+  background: #f90;
+}
+
+.cards.cards6 ul > li:nth-child(2) .cards-card-body:first-child {
+  background: #6a1ba3;
+}
+
+.cards.cards6 ul > li:nth-child(3) .cards-card-body:first-child {
+  background: #f90;
+}
+
+.cards.cards6 ul > li:nth-child(4) .cards-card-body:first-child {
+  background: #6a1ba3;
+}
+
+.cards.cards6 ul > li:nth-child(5) .cards-card-body:first-child {
+  background: #f90;
+}
+
+.cards.cards6 ul > li:nth-child(6) .cards-card-body:first-child {
+  background: #6a1ba3;
+}
+
+/* Text column: stretches to fill card, left-aligned */
+.cards.cards6 .cards-card-body:last-child {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-width: 0;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Headline: bold, colored, subtle underline, compact spacing */
+.cards.cards6 ul > li:nth-child(1) .cards-card-body:last-child h3,
+.cards.cards6 ul > li:nth-child(3) .cards-card-body:last-child h3,
+.cards.cards6 ul > li:nth-child(5) .cards-card-body:last-child h3 {
+  color: #f90;
+  border-bottom: 3px solid #f90;
+}
+
+.cards.cards6 ul > li:nth-child(2) .cards-card-body:last-child h3,
+.cards.cards6 ul > li:nth-child(4) .cards-card-body:last-child h3,
+.cards.cards6 ul > li:nth-child(6) .cards-card-body:last-child h3 {
+  color: #6a1ba3;
+  border-bottom: 3px solid #6a1ba3;
+}
+
+.cards.cards6 .cards-card-body:last-child h3 {
+  font-size: 19px;
   font-weight: bold;
   text-align: left;
-  margin: 0 0 10px;
-  padding-bottom: 6px;
-  border-bottom: 4px solid #f7a600;
+  margin: 0 0 6px;
+  padding-bottom: 4px;
   width: fit-content;
+  line-height: 1.2;
 }
 
-/* Headline color and underline per card */
-.cards.cards6 > ul > li:nth-child(1) > .cards-card-body:last-child h3,
-.cards.cards6 > ul > li:nth-child(3) > .cards-card-body:last-child h3,
-.cards.cards6 > ul > li:nth-child(5) > .cards-card-body:last-child h3 {
-  color: #f7a600;
-  border-bottom-color: #f7a600;
-}
-
-.cards.cards6 > ul > li:nth-child(2) > .cards-card-body:last-child h3,
-.cards.cards6 > ul > li:nth-child(4) > .cards-card-body:last-child h3,
-.cards.cards6 > ul > li:nth-child(6) > .cards-card-body:last-child h3 {
-  color: #6a1bbf;
-  border-bottom-color: #6a1bbf;
-}
-
-/* Description paragraph: left aligned, compact spacing */
-.cards.cards6 > ul > li > .cards-card-body:last-child p {
-  color: #333;
+/* Description styling: slightly smaller font, compact spacing */
+.cards.cards6 .cards-card-body:last-child p {
+  color: #444;
   font-size: 15px;
+  margin-bottom: 8px;
+  line-height: 1.45;
   text-align: left;
-  margin: 0 0 8px;
-  padding: 0;
 }
 
-/* Button/link: left aligned, exact color, compact spacing */
-.cards.cards6 > ul > li > .cards-card-body:last-child .button-container {
+/* "Learn more" link styling */
+.cards.cards6 .cards-card-body:last-child .button-container {
+  margin-top: 2px;
   width: 100%;
   text-align: left;
-  margin: 0;
   padding: 0;
   display: block;
 }
 
-.cards.cards6 > ul > li > .cards-card-body:last-child .button-container a.button {
+.cards.cards6 .cards-card-body:last-child .button-container a.button {
+  color: #0078ba;
+  text-decoration: underline;
   font-size: 14px;
-  color: #0096d7;
+  font-weight: 500;
   background: none;
   border: none;
-  box-shadow: none;
-  margin: 0;
   padding: 0;
+  box-shadow: none;
   text-align: left;
-  font-weight: 500;
-  line-height: 1.1;
-  min-width: 0;
   cursor: pointer;
   display: inline;
-  text-decoration: none;
-}
-
-.cards.cards6 > ul > li > .cards-card-body:last-child .button-container a.button:hover,
-.cards.cards6 > ul > li > .cards-card-body:last-child .button-container a.button:focus {
-  color: #0096d7;
-  text-decoration: underline;
+  min-width: 0;
+  line-height: 1.1;
 }
