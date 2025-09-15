@@ -46,125 +46,129 @@
   }
 }
 
-.hero.hero4 {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  min-height: 320px;
-  width: 100vw;
-  position: relative;
-  background: url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1280&q=80') center center/cover no-repeat;
-  box-sizing: border-box;
-  padding: 0;
-}
-
-.hero.hero4 > div:first-child {
-  flex: 0 0 0px;
-}
-
-.hero.hero4 > div:last-child {
-  flex: 1 1 700px;
-  margin: 0;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.hero.hero4 > div:last-child > div {
-  width: 100%;
-  max-width: 640px;
-  padding: 2vw 0 0 1vw;
-  margin: 0;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-/* Headline: large, left-aligned, purple bar visually under "BROADBAND DATA" portion */
-.hero.hero4 h2 {
-  color: #fff;
-  font-size: 2.4rem;
-  font-weight: 800;
-  line-height: 1.08;
-  text-transform: uppercase;
-  margin-top: 0;
-  margin-bottom: 0.3em;
-  letter-spacing: 0.01em;
-  display: block;
-  box-sizing: border-box;
-  width: max-content;
-  position: relative;
-  max-width: 98vw;
-  background: none;
-}
-
-/* Purple bar visually under rightmost portion of headline, mimicking original highlight */
-.hero.hero4 h2::before {
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: -0.11em;
-  height: 0.36em;
-  width: 48%;
-  min-width: 180px;
-  max-width: 420px;
-  background: #86269B;
-  border-radius: 1px;
-  z-index: 1;
-  content: "";
-}
-
-.hero.hero4 p {
-  color: #fff;
-  font-size: 1.1rem;
-  font-weight: 400;
-  margin: 2em 0 0;
-  width: 100%;
-  line-height: 1.35;
-  text-shadow: 0 1px 6px rgb(50 30 100 / 12%);
-  padding-left: 0;
-  box-sizing: border-box;
-}
-
-/* Full-bleed hero wrapper for page edge-to-edge */
 .hero-container > .hero-wrapper {
   max-width: unset;
   padding: 0;
 }
 
-@media (width <= 700px) {
+
+.hero.hero4 {
+  width: 100vw;
+  min-height: 450px;
+  height: 450px;
+  box-sizing: border-box;
+  background-image: url('original_hero_image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+/* main layout columns */
+.hero.hero4 > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* left column is just a spacer */
+.hero.hero4 > div:first-child {
+  flex: 0 0 0px;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* right column: content */
+.hero.hero4 > div:last-child {
+  flex: 1 1 550px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  z-index: 2;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+/* content block positioning: more inset, lower and right */
+.hero.hero4 > div:last-child > div {
+  margin: 0;
+  padding: 155px 0 0 180px;
+  max-width: 540px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media (width <= 900px) {
   .hero.hero4 {
-    min-height: 180px;
     flex-direction: column;
-    align-items: stretch;
-    width: 100vw;
-    padding: 0;
+    min-height: 280px;
+    height: auto;
   }
 
   .hero.hero4 > div:last-child > div {
-    padding-top: 7vw;
-    padding-left: 3vw;
-    padding-right: 3vw;
+    padding: 56px 4vw 0;
+    max-width: 97vw;
+  }
+}
+
+/* headline styling: tighter banner, less rounded, tighter lines */
+.hero.hero4 h2 {
+  margin: 0 0 3px;
+  font-weight: 800;
+  font-size: 2.4rem;
+  line-height: 1.02;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  text-align: left;
+  background: #6D28D9;
+  color: #fff;
+  border-radius: 2px;
+  width: fit-content;
+  max-width: 96%;
+  padding: 10px 18px 10px 16px;
+  box-shadow: 0 2px 12px rgb(0 0 0 / 4%);
+  white-space: pre-line;
+}
+
+/* supporting message: lighter overlay, tighter to headline */
+.hero.hero4 p {
+  background: rgb(0 0 0 / 54%);
+  margin-top: 1px;
+  margin-bottom: 0;
+  color: #fff;
+  padding: 9px 15px;
+  border-radius: 3px;
+  font-size: 1.04rem;
+  font-weight: 400;
+  line-height: 1.38;
+  box-shadow: 0 2px 12px rgb(0 0 0 / 7%);
+  max-width: 96%;
+  display: inline-block;
+  text-align: left;
+}
+
+@media (width <= 600px) {
+  .hero.hero4 > div:last-child > div {
+    padding-top: 18px;
+    padding-left: 4vw;
+    padding-right: 4vw;
   }
 
   .hero.hero4 h2 {
-    font-size: 1.2rem;
-    width: 100%;
-    max-width: 100vw;
-  }
-
-  .hero.hero4 h2::before {
-    height: 0.26em;
-    min-width: 70px;
-    max-width: 200px;
-    width: 52%;
-    bottom: -0.10em;
+    font-size: 1.18rem;
+    padding: 7px;
   }
 
   .hero.hero4 p {
     font-size: 0.97rem;
-    margin-top: 1.4em;
+    padding: 7px;
   }
 }
