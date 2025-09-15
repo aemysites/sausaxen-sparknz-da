@@ -1,3 +1,4 @@
+/* stylelint-disable no-descending-specificity */
 .accordion details {
   border: 1px solid #dadada;
 }
@@ -60,98 +61,6 @@
 }
 
 
-.accordion.accordion10 {
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  background: #fff;
-  padding: 0;
-  border-radius: 0;
-  box-shadow: none;
-  display: block;
-}
-
-.accordion.accordion10 details {
-  background: #fff;
-  margin: 0;
-  border: none;
-  display: block;
-}
-
-.accordion.accordion10 details + details {
-  margin-top: 0;
-}
-
-.accordion.accordion10 summary {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  position: relative;
-  padding: 14px 24px 14px 16px;
-  border-bottom: 1px solid #EEE;
-  background: #fff;
-  cursor: pointer;
-  outline: none;
-  z-index: 1;
-  list-style-type: none;
-  appearance: none;
-  overflow: visible;
-}
-
-.accordion.accordion10 details:last-child summary {
-  border-bottom: none;
-}
-
-.accordion.accordion10 summary::-webkit-details-marker,
-.accordion.accordion10 summary::marker {
-  display: none;
-}
-
-.accordion.accordion10 summary h3 {
-  margin: 0;
-  font-size: 16px;
-  font-weight: 500;
-  color: #242424;
-  line-height: 1.4;
-  text-align: left;
-  flex: 1 1 0;
-  min-width: 0;
-  padding: 0;
-  overflow-wrap: break-word;
-}
-
-.accordion.accordion10 summary::after {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 16px;
-  height: 16px;
-  background-image: url("data:image/svg+xml;utf8,<svg width='16' height='16' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'><rect x='7.5' y='3' width='1' height='10' rx='0.5' fill='%239E9E9E'/><rect x='3' y='7.5' width='10' height='1' rx='0.5' fill='%239E9E9E'/></svg>");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-  border: none;
-}
-
-@media (width <= 900px) {
-  .accordion.accordion10 summary,
-  .accordion.accordion10 .accordion-item-body {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-
-  .accordion.accordion10 summary::after {
-    right: 12px;
-  }
-}
-
-
 .accordion.accordion5 {
   box-sizing: border-box;
   width: 100%;
@@ -165,7 +74,6 @@
   align-items: flex-start;
 }
 
-/* Ensure block is visible and not collapsed */
 .accordion.accordion5,
 .accordion.accordion5 * {
   visibility: visible;
@@ -206,21 +114,9 @@
 }
 
 .accordion.accordion5 summary h3 {
-  flex: 1 1 auto;
-  min-width: 0;
-  text-align: left;
-  margin: 0;
-  padding: 0;
-  color: #3C3C3C;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 1.5;
-  word-break: break-word;
-  overflow-wrap: anywhere;
-  margin-right: 18px;
-}
+    margin-right: 10px;
+  }
 
-/* Hide default marker, but keep for accessibility if custom icons are added */
 .accordion.accordion5 summary::-webkit-details-marker,
 .accordion.accordion5 summary::marker {
   display: none;
@@ -237,13 +133,155 @@
   line-height: 1.7;
 }
 
-@media (max-width: 900px) {
+@media (width <= 900px) {
   .accordion.accordion5 {
     max-width: 100%;
     padding-left: 16px;
     padding-right: 16px;
   }
+
   .accordion.accordion5 summary h3 {
     margin-right: 10px;
+  }
+}
+
+
+.accordion.accordion10 {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 4%);
+  padding: 0;
+  margin: 0 auto 24px;
+  max-width: 600px;
+  width: 100%;
+  border: none;
+  display: block;
+}
+
+.accordion.accordion10 .accordion-item {
+  border-bottom: 1px solid #e0e0e0;
+  margin: 0;
+  background: #fff;
+}
+
+.accordion.accordion10 .accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion.accordion10 summary.accordion-item-label {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  min-height: 48px;
+  padding: 17px 24px;
+  cursor: pointer;
+  background: #fff;
+  border: none;
+  outline: none;
+  position: relative;
+  list-style: none;
+  transition: background 0.2s;
+  appearance: none;
+}
+
+.accordion.accordion10 summary.accordion-item-label::-webkit-details-marker,
+.accordion.accordion10 summary.accordion-item-label::marker {
+  display: none;
+}
+
+.accordion.accordion10 summary.accordion-item-label h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #222;
+  line-height: 1.22;
+  letter-spacing: normal;
+  display: flex;
+  align-items: center;
+}
+
+.accordion.accordion10 summary.accordion-item-label::after {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='7.5' y='3' width='1' height='10' rx='0.5' fill='%23b0b0b0'/%3E%3Crect x='3' y='7.5' width='10' height='1' rx='0.5' fill='%23b0b0b0'/%3E%3C/svg%3E");
+  transition: transform 0.2s;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.accordion.accordion10 details[open] summary.accordion-item-label::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.accordion.accordion10 details:not([open]) .accordion-item-body {
+  display: none;
+}
+
+.accordion.accordion10 .accordion-item-body {
+  padding: 12px 24px 16px 56px;
+  color: #666;
+  font-size: 15px;
+  background: #fafafa;
+}
+
+.accordion.accordion10 .accordion-item-body p,
+.accordion.accordion10 .accordion-item-body ul,
+.accordion.accordion10 .accordion-item-body li {
+  color: #666;
+  font-size: 15px;
+  margin-top: 0.8em;
+  margin-bottom: 0.25em;
+}
+
+.accordion.accordion10 .accordion-item-body ul {
+  margin-left: 16px;
+  padding-left: 16px;
+}
+
+.accordion.accordion10 .accordion-item-body a {
+  color: #2b7bb9;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.accordion.accordion10 .accordion-item-body a:hover {
+  color: #174c79;
+}
+
+.accordion.accordion10 summary.accordion-item-label:hover,
+.accordion.accordion10 summary.accordion-item-label:focus {
+  background: #f6f6f6;
+}
+
+@media (width <= 700px) {
+  .accordion.accordion10 {
+    max-width: 100%;
+  }
+
+  .accordion.accordion10 summary.accordion-item-label,
+  .accordion.accordion10 .accordion-item-body {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .accordion.accordion10 summary.accordion-item-label::after {
+    right: 12px;
+  }
+
+  .accordion.accordion10 .accordion-item-body {
+    padding-left: 32px;
   }
 }
