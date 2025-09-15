@@ -1,46 +1,66 @@
 /* global WebImporter */
 export default function parse(element, { document }) {
   // Helper to get all accordion panels
-  const accordionPanels = element.querySelectorAll('.panel.event-accordion-box');
+  const panels = element.querySelectorAll('.panel.event-accordion-box');
+  const rows = [];
 
-  // Table header
-  const headerRow = ['Accordion (accordion5)'];
+  // Header row: must be exactly one column with the block name
+  // But for correct table structure, use colspan=2 for the header cell
+  const table = document.createElement('table');
+  const thead = document.createElement('thead');
+  const headerTr = document.createElement('tr');
+  const headerTh = document.createElement('th');
+  headerTh.textContent = 'Accordion (accordion5)';
+  headerTh.setAttribute('colspan', '2');
+  headerTr.appendChild(headerTh);
+  thead.appendChild(headerTr);
+  table.appendChild(thead);
 
-  // Build rows for each accordion item
-  const rows = Array.from(accordionPanels).map(panel => {
-    // Title cell: find the .accordion-toggle and its h3
+  const tbody = document.createElement('tbody');
+
+  panels.forEach((panel) => {
+    // Title cell: find the clickable title (h3 inside .accordion-toggle)
+    let titleCell = '';
     const toggle = panel.querySelector('.accordion-toggle');
-    let titleEl = null;
     if (toggle) {
-      // Use the h3 as the title
-      titleEl = toggle.querySelector('h3');
-      // Defensive: fallback to toggle itself if h3 missing
-      if (!titleEl) titleEl = toggle;
-    }
-
-    // Content cell: find the .panel-collapse and its .panel-body
-    const collapse = panel.querySelector('.panel-collapse');
-    let contentEl = null;
-    if (collapse) {
-      const body = collapse.querySelector('.panel-body');
-      if (body) {
-        // Use the full body block for resilience
-        contentEl = body;
+      const h3 = toggle.querySelector('h3');
+      if (h3) {
+        titleCell = h3;
       } else {
-        contentEl = collapse;
+        titleCell = toggle.textContent.trim();
       }
     }
 
-    // Defensive: if either cell missing, use empty string
-    return [titleEl || '', contentEl || ''];
+    // Content cell: find the .panel-body (expanded content)
+    let contentCell = '';
+    const panelBody = panel.querySelector('.panel-body');
+    if (panelBody) {
+      const pad = panelBody.querySelector('.default-mobile-padding');
+      if (pad) {
+        contentCell = pad;
+      } else {
+        contentCell = panelBody;
+      }
+    }
+
+    const tr = document.createElement('tr');
+    const td1 = document.createElement('td');
+    if (titleCell instanceof HTMLElement) {
+      td1.appendChild(titleCell.cloneNode(true));
+    } else {
+      td1.textContent = titleCell;
+    }
+    const td2 = document.createElement('td');
+    if (contentCell instanceof HTMLElement) {
+      td2.appendChild(contentCell.cloneNode(true));
+    } else {
+      td2.textContent = contentCell;
+    }
+    tr.appendChild(td1);
+    tr.appendChild(td2);
+    tbody.appendChild(tr);
   });
 
-  // Compose table data
-  const cells = [headerRow, ...rows];
-
-  // Create block table
-  const block = WebImporter.DOMUtils.createTable(cells, document);
-
-  // Replace original element
-  element.replaceWith(block);
+  table.appendChild(tbody);
+  element.replaceWith(table);
 }
